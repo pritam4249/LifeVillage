@@ -1,0 +1,2798 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="desert"><head><script>(function(firebaseConfig, initialAuthToken, appId) {
+        window.__firebase_config = firebaseConfig;
+        window.__initial_auth_token = initialAuthToken;
+        window.__app_id = appId;
+            })("\n{\n  \"apiKey\": \"AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY\",\n  \"authDomain\": \"bard-frontend.firebaseapp.com\",\n  \"projectId\": \"bard-frontend\",\n  \"storageBucket\": \"bard-frontend.firebasestorage.app\",\n  \"messagingSenderId\": \"175205271074\",\n  \"appId\": \"1:175205271074:web:2b7bd4d34d33bf38e6ec7b\"\n}\n","eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg4NWQ3NDljYzY2NDljMDMxOWY1YmJlYWYwMWU4ZmVjZDIyZjk1YzQiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIxNzcwMTk3MDg4OTQ1MTkxOTI3NiIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiJjXzNhM2Q5MzRkZTdkZjFhMDhfbGlmZS12aWxsYWdlLmh0bWwtMTcxIn0sImV4cCI6MTc3OTAyOTUyNCwiaWF0IjoxNzc5MDI1OTI0LCJhbGciOiJSUzI1NiJ9.hvpnolv_-pXLbuN0R81CmXNEPz8lArbtV_RV09mdo6OzIvnvZrXMjDW7ev28ju0qXEgxac9kf1_g1umMmeqN382al_TFRBxWlSsd-8fl_b_leqUlbC7uBP7A8Eb9rDA_2WcfbGV--Jk_4Yc-t-Ds6cr4aVPqg4tI5d7NSbC8hPnEId9KlhMEliXvmNLTBnyhHYfRNSHAQu7RMlo7xQZ_mxelMf8pmiCr0ijdJlLkh_RjTRDu5m8cmk1E6U2u-otJUBUZj2YfAyqY80lOIyG1QPK2GvT_wkmh_VG6N_J6AR0RvoPQuI_MP3FBqL2iHPvkn9XaYLIA_25qSN1lwakqNg","c_3a3d934de7df1a08_life-village.html-171")</script><script>(function(){'use strict';var h=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,d){if(a==Array.prototype||a==Object.prototype)return a;a[b]=d.value;return a};function l(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var d=a[b];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");}var n=l(this);
+function p(a,b){if(b)a:{var d=n;a=a.split(".");for(var c=0;c<a.length-1;c++){var e=a[c];if(!(e in d))break a;d=d[e]}a=a[a.length-1];c=d[a];b=b(c);b!=c&&b!=null&&h(d,a,{configurable:!0,writable:!0,value:b})}}function r(a){function b(c){return a.next(c)}function d(c){return a.throw(c)}return new Promise(function(c,e){function f(g){g.done?c(g.value):Promise.resolve(g.value).then(b,d).then(f,e)}f(a.next())})}function t(a){return r(a())}
+p("Object.values",function(a){return a?a:function(b){var d=[],c;for(c in b)Object.prototype.hasOwnProperty.call(b,c)&&d.push(b[c]);return d}});p("Array.prototype.includes",function(a){return a?a:function(b,d){var c=this;c instanceof String&&(c=String(c));var e=c.length;d=d||0;for(d<0&&(d=Math.max(d+e,0));d<e;d++){var f=c[d];if(f===b||Object.is(f,b))return!0}return!1}});/*
+
+ MIT License
+
+ Copyright (c) 2017-2023 W.Y.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+*/
+function u(a,b){var d=a.style;b.backgroundColor&&(d.backgroundColor=b.backgroundColor);b.width&&(d.width=`${b.width}px`);b.height&&(d.height=`${b.height}px`);var c=b.style;c!=null&&Object.keys(c).forEach(e=>{d[e]=c[e]})};var v=(()=>{var a=0;return()=>{a+=1;return`u${`0000${(Math.random()*1679616<<0).toString(36)}`.slice(-4)}${a}`}})();function w(a){var b=[];for(let d=0,c=a.length;d<c;d++)b.push(a[d]);return b}let x=null;function y(a={}){return x?x:a.l?x=a.l:x=w(window.getComputedStyle(document.documentElement))}function z(a,b){return(a=(a.ownerDocument.defaultView||window).getComputedStyle(a).getPropertyValue(b))?parseFloat(a.replace("px","")):0}
+function A(a,b={}){var d;if(!(d=b.width)){d=z(a,"border-left-width");var c=z(a,"border-right-width");d=a.clientWidth+d+c}(b=b.height)||(b=z(a,"border-top-width"),c=z(a,"border-bottom-width"),b=a.clientHeight+b+c);return{width:d,height:b}}function B(a){return new Promise((b,d)=>{var c=new Image;c.onload=()=>{c.decode().then(()=>{requestAnimationFrame(()=>b(c))})};c.onerror=d;c.crossOrigin="anonymous";c.decoding="async";c.src=a})}
+function C(a){return t(function*(){return Promise.resolve().then(()=>(new XMLSerializer).serializeToString(a)).then(encodeURIComponent).then(b=>`data:image/svg+xml;charset=utf-8,${b}`)})}
+function D(a,b,d){return t(function*(){var c=document.createElementNS("http://www.w3.org/2000/svg","svg"),e=document.createElementNS("http://www.w3.org/2000/svg","foreignObject");c.setAttribute("width",`${b}`);c.setAttribute("height",`${d}`);c.setAttribute("viewBox",`0 0 ${b} ${d}`);e.setAttribute("width","100%");e.setAttribute("height","100%");e.setAttribute("x","0");e.setAttribute("y","0");e.setAttribute("externalResourcesRequired","true");c.appendChild(e);e.appendChild(a);return C(c)})}
+var E=(a,b)=>{if(a instanceof b)return!0;a=Object.getPrototypeOf(a);return a===null?!1:a.constructor.name===b.name||E(a,b)};function F(a,b){return y(b).map(d=>{var c=a.getPropertyValue(d),e=a.getPropertyPriority(d);return`${d}: ${c}${e?" !important":""};`}).join(" ")}
+function G(a,b,d,c){a=window.getComputedStyle(a,d);var e=a.getPropertyValue("content");if(e!==""&&e!=="none"){var f=v();try{b.className=`${b.className} ${f}`}catch(k){return}e=document.createElement("style");var g=e.appendChild;d=`.${f}:${d}`;a.cssText?(c=a.getPropertyValue("content"),c=`${a.cssText} content: '${c.replace(/'|"/g,"")}';`):c=F(a,c);g.call(e,document.createTextNode(`${d}{${c}}`));b.appendChild(e)}};function H(a){return a.search(/^(data:)/)!==-1}function I(a,b,d){return t(function*(){var c=yield fetch(a,b);if(c.status===404)throw Error(`Resource "${c.url}" not found`);var e=yield c.blob();return new Promise((f,g)=>{var k=new FileReader;k.onerror=g;k.onloadend=()=>{try{f(d({o:c,result:k.result}))}catch(m){g(m)}};k.readAsDataURL(e)})})}const J={};function K(a,b,d){var c=a.replace(/\?.*/,"");d&&(c=a);/ttf|otf|eot|woff2?/i.test(c)&&(c=c.replace(/.*\//,""));return b?`[${b}]${c}`:c}
+function L(a,b,d){return t(function*(){var c=K(a,b,d.C);if(J[c]!=null)return J[c];d.u&&(a+=(/\?/.test(a)?"&":"?")+(new Date).getTime());try{let f=yield I(a,d.i,({o:g,result:k})=>{b||(b=g.headers.get("Content-Type")||"");return k.split(/,/)[1]});var e=`data:${b};base64,${f}`}catch(f){e=d.B||""}return J[c]=e})};const M={P:"application/font-woff",R:"application/font-woff",N:"application/font-truetype",v:"application/vnd.ms-fontobject",H:"image/png",F:"image/jpeg",D:"image/jpeg",A:"image/gif",M:"image/tiff",L:"image/svg+xml",O:"image/webp"};function N(a){return(a=/\.([^./]*?)$/g.exec(a))?a[1]:""};function O(a){return t(function*(){var b=a.toDataURL();return b==="data:,"?a.cloneNode(!1):B(b)})}function aa(a,b){return t(function*(){if(a.currentSrc){var d=document.createElement("canvas");let c=d.getContext("2d");d.width=a.clientWidth;d.height=a.clientHeight;c==null||c.drawImage(a,0,0,d.width,d.height);d=d.toDataURL();return B(d)}d=a.poster;d=yield L(d,M[N(d).toLowerCase()]||"",b);return B(d)})}
+function ba(a,b){return t(function*(){try{let d;if(a==null?0:(d=a.contentDocument)==null?0:d.body)return yield P(a.contentDocument.body,b,!0)}catch(d){}return a.cloneNode(!1)})}function ca(a,b){return t(function*(){return E(a,HTMLCanvasElement)?O(a):E(a,HTMLVideoElement)?aa(a,b):E(a,HTMLIFrameElement)?ba(a,b):a.cloneNode(a.tagName!=null&&a.tagName.toUpperCase()==="SVG")})}
+function da(a,b,d){return t(function*(){if(b.tagName!=null&&b.tagName.toUpperCase()==="SVG")return b;var c=[];if(a.tagName!=null&&a.tagName.toUpperCase()==="SLOT"&&a.assignedNodes)c=w(a.assignedNodes());else{let e;if(E(a,HTMLIFrameElement)&&((e=a.contentDocument)==null?0:e.body))c=w(a.contentDocument.body.childNodes);else{let f;c=w(((f=a.shadowRoot)!=null?f:a).childNodes)}}if(c.length===0||E(a,HTMLVideoElement))return b;yield c.reduce((e,f)=>e.then(()=>P(f,d)).then(g=>{g&&b.appendChild(g)}),Promise.resolve());
+return b})}function ea(a,b,d){var c=b.style;if(c){var e=window.getComputedStyle(a);e.cssText?(c.cssText=e.cssText,c.transformOrigin=e.transformOrigin):y(d).forEach(f=>{var g=e.getPropertyValue(f);f==="font-size"&&g.endsWith("px")&&(g=`${Math.floor(parseFloat(g.substring(0,g.length-2)))-.1}px`);E(a,HTMLIFrameElement)&&f==="display"&&g==="inline"&&(g="block");f==="d"&&b.getAttribute("d")&&(g=`path(${b.getAttribute("d")})`);c.setProperty(f,g,e.getPropertyPriority(f))})}}
+function fa(a,b){E(a,HTMLSelectElement)&&(b=Array.from(b.children).find(d=>a.value===d.getAttribute("value")))&&b.setAttribute("selected","")}
+function ha(a,b){return t(function*(){var d=a.querySelectorAll?a.querySelectorAll("use"):[];if(d.length===0)return a;var c={};for(var e=0;e<d.length;e++){var f=d[e].getAttribute("xlink:href");if(f){let g=document.querySelector(f);a.querySelector(f)||!g||c[f]||(c[f]=yield P(g,b,!0))}}d=Object.values(c);if(d.length){c=document.createElementNS("http://www.w3.org/1999/xhtml","svg");c.setAttribute("xmlns","http://www.w3.org/1999/xhtml");c.style.position="absolute";c.style.width="0";c.style.height="0";
+c.style.overflow="hidden";c.style.display="none";e=document.createElementNS("http://www.w3.org/1999/xhtml","defs");c.appendChild(e);for(f=0;f<d.length;f++)e.appendChild(d[f]);a.appendChild(c)}return a})}
+function P(a,b,d){return t(function*(){return d||!b.filter||b.filter(a)?Promise.resolve(a).then(c=>ca(c,b)).then(c=>da(a,c,b)).then(c=>{E(c,Element)&&(ea(a,c,b),G(a,c,":before",b),G(a,c,":after",b),E(a,HTMLTextAreaElement)&&(c.textContent=a.value),E(a,HTMLInputElement)&&c.setAttribute("value",a.value),fa(a,c));return c}).then(c=>ha(c,b)):null})};const Q=/url\((['"]?)([^'"]+?)\1\)/g,ia=/url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,ja=/src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;function ka(a){var b=[];a.replace(Q,(d,c,e)=>{b.push(e);return d});return b.filter(d=>!H(d))}
+function la(a,b,d,c){return t(function*(){try{let e=d?(new URL(b,d||void 0)).toString():b,f;f=yield L(e,M[N(b).toLowerCase()]||"",c);return a.replace(new RegExp(`(url\\(['"]?)(${b.replace(/([.*+?^${}()|\[\]\/\\])/g,"\\$1")})(['"]?\\))`,"g"),`$1${f}$3`)}catch(e){}return a})}function ma(a,{I:b}){return b?a.replace(ja,d=>{for(;;){let [c,,e]=ia.exec(d)||[];if(!e)return"";if(e===b)return`src: ${c};`}}):a}
+function R(a,b,d){return t(function*(){if(a.search(Q)===-1)return a;var c=ma(a,d);return ka(c).reduce((e,f)=>e.then(g=>la(g,f,b,d)),Promise.resolve(c))})};function S(a,b,d){return t(function*(){var c,e=(c=b.style)==null?void 0:c.getPropertyValue(a);return e?(c=yield R(e,null,d),b.style.setProperty(a,c,b.style.getPropertyPriority(a)),!0):!1})}function na(a,b){return t(function*(){(yield S("background",a,b))||(yield S("background-image",a,b));(yield S("mask",a,b))||(yield S("-webkit-mask",a,b))||(yield S("mask-image",a,b))||(yield S("-webkit-mask-image",a,b))})}
+function oa(a,b){return t(function*(){var d=E(a,HTMLImageElement);if(d&&!H(a.src)||E(a,SVGImageElement)&&!H(a.href.baseVal)){var c=d?a.src:a.href.baseVal,e=yield L(c,M[N(c).toLowerCase()]||"",b);yield new Promise((f,g)=>{a.onload=f;a.onerror=b.m?(...k)=>{try{f(b.m(...k))}catch(m){g(m)}}:g;a.decode&&(a.decode=f);a.loading==="lazy"&&(a.loading="eager");d?(a.srcset="",a.src=e):a.href.baseVal=e})}})}
+function pa(a,b){return t(function*(){var d=w(a.childNodes).map(c=>T(c,b));yield Promise.all(d).then(()=>a)})}function T(a,b){return t(function*(){E(a,Element)&&(yield na(a,b),yield oa(a,b),yield pa(a,b))})};const U={};function V(a){return t(function*(){var b=U[a];if(b!=null)return b;b=yield(yield fetch(a)).text();b={url:a,cssText:b};return U[a]=b})}function W(a,b){return t(function*(){var d=a.cssText,c=/url\(["']?([^"')]+)["']?\)/g,e=(d.match(/url\([^)]+\)/g)||[]).map(f=>t(function*(){var g=f.replace(c,"$1");g.startsWith("https://")||(g=(new URL(g,a.url)).href);return I(g,b.i,({result:k})=>{d=d.replace(f,`url(${k})`);return[f,k]})}));return Promise.all(e).then(()=>d)})}
+function X(a){if(a==null)return[];var b=[];a=a.replace(/(\/\*[\s\S]*?\*\/)/gi,"");for(var d=RegExp("((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})","gi");;){var c=d.exec(a);if(c===null)break;b.push(c[0])}a=a.replace(d,"");d=/@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi;for(c=RegExp("((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})","gi");;){let e=d.exec(a);if(e===null)if(e=c.exec(a),e===null)break;else d.lastIndex=c.lastIndex;else c.lastIndex=
+d.lastIndex;b.push(e[0])}return b}
+function qa(a,b){return t(function*(){var d=[],c=[];a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach((f,g)=>{if(f.type===CSSRule.IMPORT_RULE){let k=g+1;f=V(f.href).then(m=>W(m,b)).then(m=>X(m).forEach(q=>{try{e.insertRule(q,q.startsWith("@import")?k+=1:e.cssRules.length)}catch(Da){}})).catch(()=>{});c.push(f)}})}catch(f){let g=a.find(k=>k.href==null)||document.styleSheets[0];e.href!=null&&c.push(V(e.href).then(k=>W(k,b)).then(k=>X(k).forEach(m=>{g.insertRule(m,g.cssRules.length)})).catch(()=>
+{}))}});return Promise.all(c).then(()=>{a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach(f=>{d.push(f)})}catch(f){}});return d})})}function ra(a){return a.filter(b=>b.type===CSSRule.FONT_FACE_RULE).filter(b=>b.style.getPropertyValue("src").search(Q)!==-1)}function sa(a,b){return t(function*(){if(a.ownerDocument==null)throw Error("Provided element is not within a Document");var d=w(a.ownerDocument.styleSheets);d=yield qa(d,b);return ra(d)})}
+function ta(a){function b(c){(c.style.fontFamily||getComputedStyle(c).fontFamily).split(",").forEach(e=>{d.add(e.trim().replace(/["']/g,""))});Array.from(c.children).forEach(e=>{e instanceof HTMLElement&&b(e)})}var d=new Set;b(a);return d}function ua(a,b){return t(function*(){var d=yield sa(a,b),c=ta(a);return(yield Promise.all(d.filter(e=>c.has(e.style.fontFamily.trim().replace(/["']/g,""))).map(e=>R(e.cssText,e.parentStyleSheet?e.parentStyleSheet.href:null,b)))).join("\n")})}
+function va(a,b){return t(function*(){var d=b.j!=null?b.j:b.K?null:yield ua(a,b);if(d){let c=document.createElement("style");c.appendChild(document.createTextNode(d));a.firstChild?a.insertBefore(c,a.firstChild):a.appendChild(c)}})};function wa(a,b={}){return t(function*(){var {width:d,height:c}=A(a,b),e=yield P(a,b,!0);yield va(e,b);yield T(e,b);u(e,b);return yield D(e,d,c)})}
+function xa(a,b={}){return t(function*(){var {width:d,height:c}=A(a,b),e=yield wa(a,b);e=yield B(e);var f=document.createElement("canvas"),g=f.getContext("2d"),k=b.G||window.devicePixelRatio||1,m=b.h||d,q=b.g||c;f.width=m*k;f.height=q*k;!b.J&&(f.width>16384||f.height>16384)&&(f.width>16384&&f.height>16384?f.width>f.height?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384):f.width>16384?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384));
+f.style.width=`${m}`;f.style.height=`${q}`;b.backgroundColor&&(g.fillStyle=b.backgroundColor,g.fillRect(0,0,f.width,f.height));g.drawImage(e,0,0,f.width,f.height);return f})}function ya(a,b={}){return t(function*(){return(yield xa(a,b)).toDataURL()})};const za=["gemini.google.com","corp.google.com","proxy.googlers.com"];function Y(){return document.body.querySelectorAll('[class*="animate"]').length>0}function Z(a){return t(function*(){try{return yield ya(a,{h:a.offsetWidth,g:a.offsetHeight})}catch(d){var b=a.offsetHeight;let c=document.createElement("canvas");c.width=a.offsetWidth;c.height=b;return c.toDataURL("image/png")}})}
+function Aa(){return t(function*(){var a=document.body.offsetWidth,b=document.body.offsetHeight,d=document.body.cloneNode(!0);d.querySelectorAll('[class*="animate"]').forEach(c=>{c.classList.remove(...Array.from(c.classList).filter(e=>e.startsWith("animate")))});d.style.width=`${a}px`;d.style.height=`${b}px`;return d})}
+function Ba(a){return t(function*(){var b=document.body;if(Y()){var d=yield Aa();b=d;document.body.appendChild(d)}d=yield Z(b);Y()&&document.body.removeChild(b);window.parent.postMessage({type:"SEND_SCREENSHOT",image:d,topOffset:document.documentElement.scrollTop},a.origin)})}function Ca(a){return t(function*(){var b={type:"SEND_SCREENSHOT_FOR_DATA_VISUALIZATION",image:yield Z(document.body),topOffset:0};window.parent.postMessage(b,a.origin)})}
+window.addEventListener("message",a=>t(function*(){if(za.some(d=>a.origin.includes(d))){var b=a.data;b&&(b.type==="MAKE_SCREENSHOT"&&(yield Ba(a)),b.type==="MAKE_SCREENSHOT_FOR_DATA_VISUALIZATION"&&(yield Ca(a)))}}));
+})();</script><script>(function() {
+  // Ensure this script is executed only once
+  if (window.firebaseAuthBridgeScriptLoaded) {
+    return;
+  }
+  window.firebaseAuthBridgeScriptLoaded = true;
+
+  let nextTokenPromiseId = 0;
+
+  // Stores { resolve, reject } for ongoing token requests
+  const pendingTokenPromises = {};
+
+  // Listen for messages from the Host Application
+  window.addEventListener('message', function(event) {
+
+    const messageData = event.data;
+
+  if (messageData && messageData.type === 'RESOLVE_NEW_FIREBASE_TOKEN') {
+      const { success, token, error, promiseId } = messageData ?? {};
+      if (pendingTokenPromises[promiseId]) {
+        if (success) {
+          pendingTokenPromises[promiseId].resolve(token);
+        } else {
+          pendingTokenPromises[promiseId].reject(new Error(error || 'Token refresh failed from host.'));
+        }
+        delete pendingTokenPromises[promiseId];
+      }
+    }
+  });
+
+  // Expose a function for the Generated App to request a new Firebase token
+  window.requestNewFirebaseToken = function() {
+    const currentPromiseId = nextTokenPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingTokenPromises[currentPromiseId] = { resolve, reject };
+    });
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'REQUEST_NEW_FIREBASE_TOKEN',
+        promiseId: currentPromiseId
+      }, '*');
+    } else {
+      pendingTokenPromises[currentPromiseId].reject(new Error('No parent window to request token from.'));
+      delete pendingTokenPromises[currentPromiseId];
+    }
+    return promise;
+  };
+})();</script><script>
+let realOriginalGetUserMedia = null;
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  realOriginalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+}
+
+(function() {
+  if (navigator.mediaDevices && navigator.mediaDevices.__proto__) {
+    try {
+      Object.defineProperty(navigator.mediaDevices.__proto__, 'getUserMedia', {
+        get: function() {
+          return undefined; // Or throw an error
+        },
+        configurable: false
+      });
+    } catch (error) {
+      console.error("Error defining prototype getter:", error);
+    }
+  }
+})();
+
+(function() {
+  const pendingMediaResolvers = {};
+  let nextMediaPromiseId = 0;
+
+  function requestMediaPermissions(constraints) {
+    const mediaPromiseId = nextMediaPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingMediaResolvers[mediaPromiseId] = (granted) => {
+        delete pendingMediaResolvers[mediaPromiseId];
+        resolve(granted);
+      };
+    });
+
+    window.parent.postMessage({
+      type: 'requestMediaPermission',
+      constraints: constraints,
+      promiseId: mediaPromiseId,
+    }, '*');
+
+    return promise;
+  }
+
+  let originalGetUserMedia = realOriginalGetUserMedia;
+
+  function interceptGetUserMedia() {
+    if (navigator.mediaDevices) {
+      Object.defineProperty(navigator.mediaDevices, 'getUserMedia', {
+        value: function(constraints) {
+          return requestMediaPermissions(constraints).then((granted) => {
+            if (granted) {
+              if (originalGetUserMedia) {
+                return originalGetUserMedia(constraints);
+              } else {
+                throw new Error("Original getUserMedia not available.");
+              }
+            } else {
+              throw new DOMException('Permission denied', 'NotAllowedError');
+            }
+          });
+        },
+        writable: false,
+        configurable: false
+      });
+    }
+  }
+
+  interceptGetUserMedia();
+
+  const observer = new MutationObserver(function(mutationsList, observer) {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'reconfigured' && mutation.name === 'getUserMedia' && mutation.object === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'attributes' && mutation.attributeName === 'getUserMedia' && mutation.target === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'childList' && mutation.addedNodes) {
+        mutation.addedNodes.forEach(node => {
+          if (node === navigator.mediaDevices) {
+            interceptGetUserMedia();
+          }
+        });
+      }
+    }
+  });
+
+  function interceptSpeechRecognition() {
+    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+      return;
+    }
+
+    const OriginalSpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    const SpeechRecognitionWrapper = function(...args) {
+      const recognizer = new OriginalSpeechRecognition(...args);
+      const originalStart = recognizer.start.bind(recognizer);
+
+      recognizer.start = function() {
+        requestMediaPermissions({ audio: true }).then(granted => {
+          if (granted) {
+            originalStart();
+          } else {
+            const errorEvent = new SpeechRecognitionErrorEvent('error');
+            errorEvent.error = 'not-allowed'; // This is the standard error for permission denial.
+            recognizer.dispatchEvent(errorEvent);
+          }
+        });
+      };
+
+      return recognizer;
+    };
+
+    SpeechRecognitionWrapper.prototype = OriginalSpeechRecognition.prototype;
+    SpeechRecognitionWrapper.prototype.constructor = SpeechRecognitionWrapper;
+
+    if (window.SpeechRecognition) {
+      window.SpeechRecognition = SpeechRecognitionWrapper;
+    }
+    if (window.webkitSpeechRecognition) {
+      window.webkitSpeechRecognition = SpeechRecognitionWrapper;
+    }
+  }
+
+  interceptSpeechRecognition();
+
+  window.addEventListener('message', function(event) {
+    if (event.data) {
+      if (event.data.type === 'resolveMediaPermission') {
+        const { promiseId, granted } = event.data;
+        if (pendingMediaResolvers[promiseId]) {
+          pendingMediaResolvers[promiseId](granted);
+        }
+      }
+    }
+  });
+
+})();</script><script ws-interception-config="{&quot;parentOrigin&quot;:&quot;https://gemini.google.com&quot;,&quot;proxiedDomains&quot;:[]}">(function(){'use strict';var u=typeof Object.defineProperties=="function"?Object.defineProperty:function(b,d,e){if(b==Array.prototype||b==Object.prototype)return b;b[d]=e.value;return b};function v(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var d=0;d<b.length;++d){var e=b[d];if(e&&e.Math==Math)return e}throw Error("Cannot find global object");}var w=v(this);
+function y(b,d){if(d)a:{var e=w;b=b.split(".");for(var h=0;h<b.length-1;h++){var k=b[h];if(!(k in e))break a;e=e[k]}b=b[b.length-1];h=e[b];d=d(h);d!=h&&d!=null&&u(e,b,{configurable:!0,writable:!0,value:d})}}function z(b){function d(h){return b.next(h)}function e(h){return b.throw(h)}return new Promise(function(h,k){function m(n){n.done?h(n.value):Promise.resolve(n.value).then(d,e).then(m,k)}m(b.next())})}y("globalThis",function(b){return b||w});/*
+
+ Copyright The Closure Library Authors.
+ SPDX-License-Identifier: Apache-2.0
+*/
+function A(b,d){function e(){}e.prototype=d.prototype;b.i=d.prototype;b.prototype=new e;b.prototype.constructor=b;b.g=function(h,k,m){for(var n=Array(arguments.length-2),p=2;p<arguments.length;p++)n[p-2]=arguments[p];return d.prototype[k].apply(h,n)}};function B(b,d,e="*"){function h(a){if(typeof a==="string")return F.encode(a).buffer;if(a instanceof ArrayBuffer)return a.slice(0);if(ArrayBuffer.isView(a))return a.buffer.slice(a.byteOffset,a.byteOffset+a.byteLength);throw Error("Invalid data type");}function k(a){a=h(a);var f={type:"send",data:new Uint8Array(a)},g;(g=r)==null||g.postMessage(f,[a])}function m(){if(!r)throw Error("Data port not captured yet.");r.onmessage=a=>{if(a.data.type==="message"){a=new MessageEvent("message",{data:G.decode(a.data.data)});
+let f;(f=c.onmessage)==null||f.call(c,a);c.dispatchEvent(a)}}}function n(){if(!t)throw Error("Control port not captured yet.");t.onmessage=a=>{switch(a.data.type){case "open":l=1;var f=new Event("open"),g;(g=c.onopen)==null||g.call(c,f);c.dispatchEvent(f);q.forEach(H=>{k(H)});q=[];break;case "close":g=a.data;l=3;g=new CloseEvent("close",{code:g.code,reason:g.reason,wasClean:g.wasClean});(f=c.onclose)==null||f.call(c,g);c.dispatchEvent(g);break;case "error":l=3;f=new Event("error");let x;(x=c.onerror)==
+null||x.call(c,f);c.dispatchEvent(f)}}}function p(a){return z(function*(){var f=new MessageChannel;t=f.port1;var g=new MessageChannel;r=g.port1;n();m();window.parent.postMessage({type:"websocket_open",portOrdering:["control","data"],url:b,protocols:a||[],connectionId:I},e,[f.port2,g.port2])}())}var c=Reflect.construct(EventTarget,[],new.target);c.CONNECTING=0;c.OPEN=1;c.CLOSING=2;c.CLOSED=3;c.url=b;c.binaryType="arraybuffer";c.protocol="";c.h="";var l=0,t=null,r=null,q=[],F=new TextEncoder,G=new TextDecoder;
+c.onopen=null;c.onmessage=null;c.onclose=null;c.onerror=null;Object.defineProperty(c,"readyState",{get:()=>l,enumerable:!0,configurable:!0});Object.defineProperty(c,"bufferedAmount",{get:()=>{var a=0;q.forEach(f=>{a+=typeof f==="string"?f.length:f.byteLength});return a},enumerable:!0,configurable:!0});var I=function(){var a;return((a=globalThis.crypto)==null?0:a.randomUUID)?globalThis.crypto.randomUUID():"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,f=>{var g=Math.random()*16|0;return(f===
+"x"?g:g&3|8).toString(16)})}();c.send=a=>{if(l===1)a instanceof Blob?a.arrayBuffer().then(f=>{k(f)}):k(a);else if(l===0)if(typeof a==="string")q.push(a);else if(a instanceof ArrayBuffer||ArrayBuffer.isView(a))q.push(h(a));else throw Error("Sending Blob is not supported before the connection is open.");else console.debug("WebSocket send called in CLOSING or CLOSED state; ignored.")};c.close=(a=1E3,f="")=>{if(l!==2&&l!==3){l=2;a={type:"close",code:a,reason:f,wasClean:a===1E3};var g;(g=t)==null||g.postMessage(a)}};
+Promise.resolve().then(()=>p(d));return c}A(B,EventTarget);var C=document.currentScript,D=C==null?void 0:C.getAttribute("ws-interception-config");if(!D)throw Error("WebSocket Interceptor: Missing ws-interception-config attribute in the script tag.");var E=JSON.parse(D);if(!E.parentOrigin||typeof E.parentOrigin!=="string")throw Error("WebSocket Interceptor: Invalid parentOrigin in ws-interception-config");
+(function(b){var d=Object.getOwnPropertyDescriptor(window,"WebSocket");if(!d||d.writable||d.configurable)d=Object.assign(function(e,h){try{let k=(new URL(e)).hostname;if(b.proxiedDomains.some(m=>k===m||k.endsWith(`.${m}`)))return new B(e,h,b.parentOrigin)}catch(k){throw window.parent.postMessage({type:"websocket_blocked",url:e,reason:"blocked_invalid_url"},b.parentOrigin),new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");}window.parent.postMessage({type:"websocket_blocked",
+url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");},{CONNECTING:0,OPEN:1,CLOSING:2,CLOSED:3}),Object.defineProperty(window,"WebSocket",{value:d,writable:!1,configurable:!1})})({proxiedDomains:E.proxiedDomains||[],parentOrigin:E.parentOrigin});}).call(this);
+</script><script>((function(modelInformation) {
+  const originalFetch = window.fetch;
+  // TODO: b/421908508 - Move these out of the script and match all generative AI model calls.
+  let googleLlmBaseApiUrls = [
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':streamGenerateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageEditModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageTransformModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.ttsModelName + ':generateContent',
+  ];
+  modelInformation.deprecatedTextModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+    );
+  });
+  modelInformation.deprecatedImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predict',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predictLongRunning',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+  modelInformation.deprecatedGenerateImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+
+  const pendingFetchResolvers = {};
+  let nextPromiseId = 0;
+
+  function handleStringInput(input, optionsArgument) {
+    const actualUrl = input;
+    const fetchCallArgs = [actualUrl, optionsArgument];
+    const effectiveOptions = optionsArgument || {};
+    const bodyForApiKeyCheck = effectiveOptions.body;
+    const bodyForPostMessage = effectiveOptions.body;
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  function handleRequestInput(input, optionsArgument) {
+    const actualUrl = input.url;
+    const fetchCallArgs = [input, optionsArgument];
+    const effectiveOptions = { method: input.method, headers: new Headers(input.headers) };
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (optionsArgument) {
+      if (optionsArgument.method) effectiveOptions.method = optionsArgument.method;
+      if (optionsArgument.headers) effectiveOptions.headers = new Headers(optionsArgument.headers);
+      if ('body' in optionsArgument) {
+        bodyForApiKeyCheck = optionsArgument.body;
+        bodyForPostMessage = optionsArgument.body;
+      } else {
+        bodyForApiKeyCheck = undefined;
+        bodyForPostMessage = input.body;
+      }
+    } else {
+      bodyForApiKeyCheck = undefined;
+      bodyForPostMessage = input.body;
+    }
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  window.fetch = function(input, optionsArgument) {
+    let actualUrl;
+    let fetchCallArgs;
+    let effectiveOptions = {};
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (typeof input === 'string') {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleStringInput(input, optionsArgument));
+    } else if (input instanceof Request) {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleRequestInput(input, optionsArgument));
+    } else {
+      return originalFetch.apply(window, [input, optionsArgument]);
+    }
+
+    effectiveOptions.method = effectiveOptions.method || 'GET';
+    if (!effectiveOptions.headers) {
+      effectiveOptions.headers = new Headers();
+    }
+
+
+    if (typeof actualUrl === 'string' && googleLlmBaseApiUrls.some((url) => actualUrl.startsWith(url))) {
+      let apiKeyIsNull = true;
+
+      const regex = new RegExp("models/([^:]+)");
+      const modelNameMatch = actualUrl.match(regex);
+      const modelName = modelNameMatch ? modelNameMatch[1] : 'unspecified';
+
+
+      try {
+        const urlObject = new URL(actualUrl);  // Use URL object for robust parsing
+        const apiKeyParam = urlObject.searchParams.get('key');
+        if (apiKeyParam) {
+          apiKeyIsNull = false;
+        }
+      } catch (e) {
+        // Continue checks even if URL parsing fails
+      }
+
+      if (apiKeyIsNull && effectiveOptions.headers) {
+        const h = new Headers(effectiveOptions.headers);
+        const apiKeyHeaderValue = h.get('X-API-Key') || h.get('x-api-key');
+        if (apiKeyHeaderValue) {
+          apiKeyIsNull = false;
+          return originalFetch.apply(window, fetchCallArgs);
+        }
+      }
+
+      if (apiKeyIsNull && effectiveOptions.method && ['POST', 'PUT', 'PATCH'].includes(effectiveOptions.method.toUpperCase()) && typeof bodyForApiKeyCheck === 'string') {
+        try {
+          const bodyData = JSON.parse(bodyForApiKeyCheck);
+          if (bodyData && bodyData.apiKey) {
+            apiKeyIsNull = false;
+            return originalFetch.apply(window, fetchCallArgs);
+          }
+        } catch (e) {
+          // Ignore JSON parsing errors
+        }
+      }
+
+      if(apiKeyIsNull) {
+        const promiseId = nextPromiseId++;
+        const promise = new Promise((resolve) => {
+          pendingFetchResolvers[promiseId] = (resolvedResponse) => {
+            delete pendingFetchResolvers[promiseId];
+            resolve(resolvedResponse);
+          };
+        });
+
+        let serializedBodyForPostMessage;
+        if (typeof bodyForPostMessage === 'string' || bodyForPostMessage == null) {
+            serializedBodyForPostMessage = bodyForPostMessage;
+        } else if (bodyForPostMessage instanceof ReadableStream) {
+            serializedBodyForPostMessage = null;
+        } else {
+            try {
+                serializedBodyForPostMessage = JSON.stringify(bodyForPostMessage);
+            } catch (e) {
+                serializedBodyForPostMessage = null;
+            }
+        }
+
+        const messageOptions = {
+            method: effectiveOptions.method,
+            headers: Object.fromEntries(new Headers(effectiveOptions.headers).entries()),
+            body: serializedBodyForPostMessage
+        };
+
+        window.parent.postMessage({
+          type: 'requestFetch',
+          url: actualUrl,
+          modelName: modelName,
+          options: messageOptions,
+          promiseId: promiseId,
+        }, '*');
+
+        return promise;
+      }
+      return originalFetch.apply(window, fetchCallArgs);
+    }
+    return originalFetch.apply(window, fetchCallArgs);
+  };
+
+  window.addEventListener('message', function(event) {
+    if (event.data && event.data.type === 'resolveFetch') {
+      const { promiseId, response } = event.data;
+      if (pendingFetchResolvers[promiseId]) {
+        try {
+          const reconstructedResponse = new Response(response.body, {
+            status: response.status,
+            statusText: response.statusText,
+            headers: new Headers(response.headers),
+          });
+          pendingFetchResolvers[promiseId](reconstructedResponse);
+        } catch (error) {
+          pendingFetchResolvers[promiseId](new Response(null, { status: 500, statusText: "Interceptor Response Reconstruction Error" }));
+        }
+      }
+    }
+  });
+
+}))({"textModelName":"gemini-3-flash-preview","imageModelName":"imagen-4.0-generate-001","imageEditModelName":"gemini-3.1-flash-image-preview","imageTransformModelName":"gemini-3-pro-image-preview-11-2025","videoModelName":"veo-2.0-generate-001","ttsModelName":"gemini-2.5-flash-preview-tts","deprecatedTextModelNames":["gemini-2.0-flash","gemini-2.5-flash","gemini-2.5-flash-preview-04-17","gemini-2.5-flash-preview-05-20","gemini-2.5-flash-preview-09-2025"],"deprecatedImageModelNames":["imagen-3.0-generate-001","imagen-3.0-generate-002"],"deprecatedGenerateImageModelNames":["gemini-2.5-flash-image-preview","gemini-2.5-flash-image"]})</script><script>(function(){'use strict';function a(){window.parent.postMessage({type:"interaction"},"*")}window.addEventListener("click",a,{capture:!0,passive:!0});window.addEventListener("touchstart",a,{capture:!0,passive:!0});window.addEventListener("keydown",a,{capture:!0,passive:!0});}).call(this);
+</script><script>(function() {
+  const originalConsoleLog = console.log;
+  const originalConsoleError = console.error;
+
+    /**
+   * Normalizes an error event or a promise rejection reason into a structured error object.
+   * @param {*} errorEventOrReason The error object or reason.
+   * @return {object} Structured error data { message, name, stack }.
+   */
+  function getErrorObject(errorEventOrReason) {
+    if (errorEventOrReason instanceof Error) {
+      return {
+        message: errorEventOrReason.message,
+        name: errorEventOrReason.name,
+        stack: errorEventOrReason.stack,
+      };
+    }
+    // Fallback for non-Error objects.
+    try {
+      return {
+        message: JSON.stringify(errorEventOrReason),
+        name: 'UnknownErrorType',
+        stack: null,
+      };
+    } catch (e) {
+      return {
+        message: String(errorEventOrReason),
+        name: 'UnknownErrorTypeNonStringifiable',
+        stack: null,
+      };
+    }
+  }
+
+  /**
+   * Converts an array of arguments (from log/error) into a single string.
+   * Handles Error objects specially to include their message and stack.
+   * @param {Array<*>} args - Arguments passed to console methods.
+   * @return {string} A string representation of the arguments.
+   */
+  function stringifyArgs(args) {
+    return args
+      .map((arg) => {
+        if (arg instanceof Error) {
+          const {message, stack} = arg;
+          return `Error: ${message}${stack ? ('\nStack: ' + stack) : ''}`;
+        }
+        if (typeof arg === 'object' && arg !== null) {
+          try {
+            return JSON.stringify(arg);
+          } catch (error) {
+            return '[Circular Object]';
+          }
+        } else {
+          return String(arg);
+        }
+      })
+      .join(' ');
+  }
+
+  console.log = function(...args) {
+    const logString = stringifyArgs(args);
+    window.parent.postMessage({ type: 'log', message: logString }, '*');
+    originalConsoleLog.apply(console, args);
+  };
+
+  console.error = function(...args) {
+    let errorData;
+    if (args.length > 0 && args[0] instanceof Error) {
+      const err = args[0];
+      // If the first arg is an Error, capture its details.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        ...getErrorObject(err),
+        rawArgsString: stringifyArgs(args.slice(1)),
+        timestamp: new Date().toISOString(),
+      };
+    } else {
+      // If not an Error object, treat all args as a general error message.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        message: stringifyArgs(args),
+        name: 'ConsoleLoggedError',
+        stack: null,
+        timestamp: new Date().toISOString(),
+      };
+    }
+    window.parent.postMessage(errorData, '*');
+    originalConsoleError.apply(console, args);
+  };
+
+  // Listen for global unhandled synchronous errors.
+  window.addEventListener('error', function(event) {
+    const errorDetails = event.error ? getErrorObject(event.error) : {
+      message: event.message,
+      name: 'GlobalError',
+      stack: null,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
+    };
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'global',
+      ...errorDetails,
+      message: errorDetails.message || event.message,
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+  // Listen for unhandled promise rejections (asynchronous errors).
+  window.addEventListener('unhandledrejection', function(event) {
+    const errorDetails = getErrorObject(event.reason);
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'unhandledrejection',
+      ...errorDetails,
+      message: errorDetails.message || 'Unhandled Promise Rejection',
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+})();</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Life Village</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&amp;family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+    <script id="save-data">window.INJECTED_STATE = {"version":3,"lastLogin":1779028419428,"playerName":"Hero","theme":"desert","resources":{"gold":500,"elixir":500,"darkElixir":0,"gems":10},"builders":{"total":2,"active":0},"buildings":[{"id":"th_1","type":"town-hall","name":"Town Hall","level":1,"x":2000,"y":2000,"upgrading":false},{"id":"bboard_1","type":"bounty-board","name":"Bounty Board","level":1,"x":2150,"y":2050,"upgrading":false}],"habits":[],"tasks":[],"journal":[],"weeklyChallenge":{"weekId":"2026-W20","type":"tasks","goal":5,"progress":0,"claimed":false},"terrain":[{"type":"🪨","x":3327.8776164297597,"y":2091.302184147935,"s":13.760925961878456},{"type":"🌳","x":205.66033931754646,"y":1748.8530473583523,"s":18.015902862680377},{"type":"🌳","x":337.8086549200816,"y":1070.8532531862147,"s":10.354097320529263},{"type":"🪨","x":617.3931303310383,"y":365.1824161861441,"s":15.507839314486773},{"type":"🌲","x":2047.3046149018046,"y":1854.1689171179314,"s":11.510604230143144},{"type":"🪨","x":3449.0917098519276,"y":3750.64283174288,"s":19.90066927333828},{"type":"🪨","x":1229.4900912311277,"y":846.077512622287,"s":12.001966050170267},{"type":"🪨","x":1881.1359455846741,"y":1601.872635059408,"s":10.096756600287335},{"type":"🪨","x":541.1064708896447,"y":2430.4495052074344,"s":15.46730575490983},{"type":"🌲","x":2840.449611925578,"y":3107.1024480952474,"s":12.531124962006288},{"type":"🌳","x":247.29945541912457,"y":2228.9946279706783,"s":12.12369404977835},{"type":"🌲","x":3019.697122646903,"y":102.11541523767664,"s":17.46110260299247},{"type":"🪨","x":1322.2330489734304,"y":567.789844739309,"s":13.399129124875344},{"type":"🌳","x":288.9714951197675,"y":3559.5444167629466,"s":16.25394557508116},{"type":"🪨","x":227.22677074489184,"y":2578.2453771098517,"s":17.954583170176193},{"type":"🌳","x":2865.102731549996,"y":3079.2255299384124,"s":18.75540258040928},{"type":"🌲","x":1439.0945551494951,"y":18.774039272102527,"s":14.494782799414931},{"type":"🌲","x":1685.4353466478642,"y":982.5686711428716,"s":19.17022180157801},{"type":"🪨","x":734.4291121808055,"y":3832.5659262554836,"s":14.303409186159115},{"type":"🌳","x":3292.376370594866,"y":3031.733080428239,"s":14.893074612082273},{"type":"🪨","x":3490.73896943446,"y":3606.4087675404153,"s":17.973879897112965},{"type":"🪨","x":252.60823437878344,"y":3283.993265911704,"s":13.032700794956327},{"type":"🌳","x":1313.0227250949247,"y":398.47518326496356,"s":12.275457726818786},{"type":"🌲","x":2892.781493421353,"y":3739.059845898737,"s":10.270407236948813},{"type":"🪨","x":532.3927888748585,"y":1208.937058938318,"s":12.393371721454969},{"type":"🌳","x":2570.9987885447845,"y":1721.7273877977277,"s":18.86061951661759},{"type":"🪨","x":2724.981475956156,"y":2956.4689468215875,"s":12.961941369285341},{"type":"🌳","x":3527.431488921138,"y":1796.834474298521,"s":14.39064254238474},{"type":"🌲","x":1250.8817972411634,"y":2020.8032247865049,"s":18.608105707880895},{"type":"🌳","x":611.8735241871036,"y":3581.719601796067,"s":16.970005065340956},{"type":"🌳","x":2607.954137318302,"y":232.77864438182405,"s":16.57769724040918},{"type":"🌲","x":1466.848795678743,"y":1662.574555066385,"s":17.19111724749382},{"type":"🌲","x":1932.0777711327537,"y":2581.656527669111,"s":10.892390352614711},{"type":"🪨","x":1074.2837180841889,"y":2308.7048883498937,"s":10.456505842939805},{"type":"🌲","x":2777.2952832256124,"y":2912.000668919063,"s":12.754826279069675},{"type":"🌳","x":650.5162357425434,"y":1893.0405713606433,"s":19.280947502265917},{"type":"🌲","x":2466.2714997111834,"y":1062.6946231095644,"s":14.670964574361278},{"type":"🌳","x":126.6214497081819,"y":2742.046711822695,"s":14.59447072880721},{"type":"🌲","x":2222.7153532367083,"y":1334.1091716538358,"s":16.658411272073863},{"type":"🪨","x":3558.7094863003585,"y":712.6500095255324,"s":18.14745502471169},{"type":"🌲","x":2664.613535245735,"y":3866.9015996861162,"s":18.11779046423908},{"type":"🪨","x":2656.865821369138,"y":357.54066619847436,"s":16.381880482763336},{"type":"🌲","x":2083.244612251292,"y":972.3617189483775,"s":13.013553575592596},{"type":"🪨","x":1603.5298337264976,"y":3372.6583254683646,"s":10.903641347804296},{"type":"🪨","x":3749.2818583014014,"y":336.0748026507281,"s":19.29440357895146},{"type":"🌲","x":2515.110947213998,"y":504.4565213029273,"s":16.504027270821098},{"type":"🌲","x":3161.4857534987095,"y":2454.722895883606,"s":12.488219495717203},{"type":"🌲","x":2783.5908129782183,"y":474.0983062238229,"s":14.822767919822581},{"type":"🌲","x":88.58616459474433,"y":903.0525810812833,"s":14.279989468486747},{"type":"🌲","x":1041.514803760947,"y":3366.5604779089335,"s":13.828566988422608},{"type":"🪨","x":951.7564297311765,"y":2933.2168049600114,"s":12.54773576352818},{"type":"🌲","x":3871.595836148572,"y":1499.3161125930783,"s":14.214105379269313},{"type":"🌳","x":1278.267799083551,"y":944.3844238885504,"s":11.952805258488297},{"type":"🌲","x":1294.4263993413188,"y":3121.582249077619,"s":15.200627553658705},{"type":"🌲","x":2444.1614522147574,"y":3309.1325739151216,"s":18.564735652871605},{"type":"🪨","x":108.68868886245764,"y":3815.80683440734,"s":10.48956605089188},{"type":"🪨","x":3343.8573548301065,"y":3230.7768535174546,"s":14.95999604717781},{"type":"🌲","x":1725.5433988539153,"y":2746.289950917344,"s":16.603847745000166},{"type":"🌲","x":3810.8746732541476,"y":2347.011935620685,"s":13.131946732428332},{"type":"🪨","x":2953.938029248093,"y":1398.2600838389772,"s":11.612130081757641},{"type":"🪨","x":1210.1419060004446,"y":3837.4007668026024,"s":18.280275023771537},{"type":"🌳","x":2786.3768331881147,"y":521.1921448344583,"s":13.48332248871884},{"type":"🪨","x":3825.114602845133,"y":901.0445065141539,"s":11.4278822128108},{"type":"🌲","x":286.9824809822603,"y":669.0532971515495,"s":11.774661795770953},{"type":"🌳","x":349.0238657795999,"y":3061.387507477775,"s":16.800608479206858},{"type":"🌲","x":2894.389067783777,"y":2871.5624341202783,"s":10.011057057674861},{"type":"🪨","x":343.4331623329854,"y":431.4375007743365,"s":12.266075352054031},{"type":"🌳","x":3428.807584976312,"y":1583.9651860624144,"s":14.652713827654225},{"type":"🌳","x":458.2632351812208,"y":2273.3372779403,"s":11.17470739849523},{"type":"🌲","x":466.2003645062214,"y":3695.0056370806124,"s":16.19085482452647},{"type":"🌲","x":223.20800054149004,"y":2340.7254279666176,"s":13.171353312682186},{"type":"🌲","x":3394.9285712760684,"y":3481.7891368184064,"s":17.32241423407686},{"type":"🌲","x":2514.4463702017674,"y":3361.3948921483825,"s":14.247955605214884},{"type":"🪨","x":3697.825015962735,"y":3540.7047659464297,"s":11.703123407132807},{"type":"🪨","x":1042.2166128337267,"y":3431.8127438091324,"s":13.346656065946263},{"type":"🌳","x":3449.3803015964204,"y":1425.7518572194385,"s":14.151503517878155},{"type":"🌳","x":276.366502061137,"y":79.55702826438937,"s":13.048029567298727},{"type":"🌲","x":1604.1063856173423,"y":3638.469394383719,"s":14.681596635637106},{"type":"🌲","x":3267.5333123370365,"y":1281.0979338610196,"s":17.26446193330048},{"type":"🪨","x":3881.996667940257,"y":2510.798647151205,"s":10.47936372940967},{"type":"🌲","x":2652.978456207393,"y":2457.3765082095633,"s":19.97456365121252},{"type":"🪨","x":1484.405566654459,"y":3075.4552481339488,"s":12.559422324975458},{"type":"🌲","x":481.35662684217095,"y":3064.258628808602,"s":17.859655550746538},{"type":"🌲","x":3142.627043866014,"y":3844.4754090014612,"s":17.66019477860027},{"type":"🌳","x":2381.062141754228,"y":2002.8412734718586,"s":14.318535085931217},{"type":"🌲","x":3324.471405548479,"y":3066.3949799345573,"s":18.694557688468194},{"type":"🌲","x":2540.7762780669145,"y":3781.6481084300904,"s":16.803838361761336},{"type":"🌲","x":1576.148355496116,"y":69.34982932943967,"s":19.675991848607737},{"type":"🌲","x":3157.5892171131272,"y":1203.3051096696,"s":19.8435449036333},{"type":"🪨","x":304.26877186255297,"y":1761.3249674068356,"s":12.732199589581796},{"type":"🪨","x":2646.003258992778,"y":2018.4091148912557,"s":19.8136066686493},{"type":"🌲","x":135.118278558366,"y":3932.7796078578103,"s":16.389841613058707},{"type":"🌲","x":1664.574085159984,"y":718.7462847396091,"s":18.83494217716361},{"type":"🌲","x":409.3224896096217,"y":3720.081826148089,"s":18.443980776337412},{"type":"🌳","x":1261.5694733103737,"y":3708.7163242467795,"s":10.573863488457391},{"type":"🌲","x":633.7939067161642,"y":3407.860324344483,"s":15.682350363422302},{"type":"🪨","x":3544.7416830611473,"y":3364.7675784595776,"s":12.66397704200699},{"type":"🌳","x":1179.4878835062264,"y":2746.0780378205527,"s":11.518502143644582},{"type":"🌳","x":2206.3660530548077,"y":2521.8632201904256,"s":15.760413586131108},{"type":"🪨","x":2002.4084230353765,"y":3502.4956126726465,"s":16.07520109590041},{"type":"🌲","x":74.62273012060905,"y":3299.5519579562824,"s":12.39776646275459},{"type":"🌲","x":2333.4900184636354,"y":2440.490668599523,"s":15.471713277138406},{"type":"🌳","x":1266.1130072337983,"y":3874.5381414701114,"s":16.15090833519389},{"type":"🌳","x":3714.8092540810467,"y":193.8713358304085,"s":18.41787555069459},{"type":"🌲","x":238.69840560109878,"y":1797.1635550056817,"s":12.815415833138104},{"type":"🌲","x":2924.0435191604774,"y":752.7462319849292,"s":19.61709961733959},{"type":"🌲","x":2964.432545210002,"y":2899.1421497867123,"s":13.416433793481701},{"type":"🌲","x":1135.9911118433956,"y":452.64172349561704,"s":16.942720175520662},{"type":"🌲","x":1641.2304443365429,"y":55.89288910414325,"s":10.085864586017124},{"type":"🌲","x":108.31490875716554,"y":2025.0488103483804,"s":12.549328712500483},{"type":"🌲","x":712.7870649128454,"y":2561.9072594454337,"s":11.864279826713755},{"type":"🌲","x":3731.1030539131025,"y":3100.0663486520352,"s":11.87428632267256},{"type":"🌲","x":1181.1138574557845,"y":1626.666845055297,"s":11.887418569153851},{"type":"🌳","x":1890.736890880362,"y":611.5301884383371,"s":19.213945245610375},{"type":"🌲","x":2367.3966973965435,"y":1387.6386705596815,"s":15.192922899595942},{"type":"🌲","x":1028.341582758003,"y":37.53400185814826,"s":18.27982879860599},{"type":"🪨","x":334.60986353293265,"y":2182.9610644817876,"s":16.288962160451774},{"type":"🌳","x":3654.5511549775256,"y":141.94513807706244,"s":12.937688875144886},{"type":"🌳","x":3740.8633507111517,"y":1457.8411818802124,"s":13.939038026455819},{"type":"🌲","x":152.00080010981765,"y":116.03549580468098,"s":14.81447270612307},{"type":"🪨","x":2928.5627210826988,"y":148.04477494908497,"s":19.973576558131754},{"type":"🌲","x":2089.122798966855,"y":3248.3866009133635,"s":10.688555935121258},{"type":"🌳","x":147.64357642161485,"y":3775.547183711751,"s":16.182701652596734},{"type":"🌲","x":1326.3742658527917,"y":516.7593538280926,"s":11.472858988918233},{"type":"🌳","x":3414.3123847643437,"y":2481.183856451935,"s":19.601421444713196},{"type":"🌳","x":91.1260092179873,"y":837.9734251793707,"s":18.768302976527593},{"type":"🪨","x":179.0064431133942,"y":2354.1396210857783,"s":12.441565004210133},{"type":"🌲","x":1096.1686187474697,"y":705.1406963219051,"s":12.406134541270148},{"type":"🌳","x":3318.1755945006444,"y":1824.2572237395507,"s":10.912290606847819},{"type":"🌲","x":502.18291019155004,"y":384.3116780553828,"s":15.835362970065034},{"type":"🌲","x":2394.6263351172092,"y":1109.4329943371122,"s":13.326147869113356},{"type":"🌲","x":1900.174450034683,"y":2655.186090993084,"s":12.021253915245325},{"type":"🌲","x":183.35160785318294,"y":187.28134237971972,"s":12.470330933574587},{"type":"🌳","x":1830.438556302397,"y":2680.4827389314596,"s":16.71600104755271},{"type":"🌳","x":1151.2957965751411,"y":2316.9498019342427,"s":11.534953539367052},{"type":"🪨","x":2181.3516346301185,"y":1585.8545101823438,"s":19.838922841045132},{"type":"🌳","x":1825.1702472625766,"y":2013.7927696778206,"s":10.305602579792321},{"type":"🪨","x":1250.4613367491402,"y":2707.9526258785336,"s":17.06471216848513},{"type":"🪨","x":798.3892761985771,"y":3460.9108538279543,"s":11.328111848401932},{"type":"🪨","x":1588.0113283601531,"y":3595.063283435593,"s":13.191136978712166},{"type":"🌲","x":2386.3184923720837,"y":779.4589010954951,"s":15.744149854549505},{"type":"🪨","x":655.2477466284472,"y":1130.420193869213,"s":17.4909936158474},{"type":"🌲","x":283.4094632671622,"y":3645.006983584608,"s":10.76802286502243},{"type":"🌳","x":3156.9432657961443,"y":2477.2787448455347,"s":11.34233793058229},{"type":"🌲","x":3184.3434115389755,"y":1663.7081118387869,"s":11.326452420544229},{"type":"🌲","x":1821.028802471119,"y":171.33418613957474,"s":12.099536151151824},{"type":"🌳","x":1510.2542445492873,"y":3254.152634912316,"s":11.710951121640392},{"type":"🌲","x":3183.377544843097,"y":2755.199145169172,"s":10.273378613792374},{"type":"🌲","x":1499.918228641036,"y":404.12918814399745,"s":14.49026157722983},{"type":"🌲","x":3556.95147039296,"y":323.7209585417986,"s":19.638823858167598}],"stats":[{"id":"stat_health","name":"Health","icon":"❤️","desc":"Body is your fortress","xp":0,"level":1},{"id":"stat_wealth","name":"Wealth","icon":"💰","desc":"Gold flows to the disciplined","xp":0,"level":1},{"id":"stat_career","name":"Career","icon":"⚔️","desc":"Your blade sharpens with every battle","xp":0,"level":1},{"id":"stat_skill","name":"Skill","icon":"📚","desc":"Knowledge is the mightiest weapon","xp":0,"level":1},{"id":"stat_relationships","name":"Relationships","icon":"🤝","desc":"No hero survives alone","xp":0,"level":1},{"id":"stat_discipline","name":"Discipline","icon":"🛡️","desc":"Consistency builds empires","xp":0,"level":1},{"id":"stat_mindset","name":"Mindset","icon":"🧠","desc":"Control your mind or it controls you","xp":0,"level":1},{"id":"stat_energy","name":"Energy","icon":"⚡","desc":"Rest is a weapon","xp":0,"level":1},{"id":"stat_purpose","name":"Purpose","icon":"🎯","desc":"Know your why","xp":0,"level":1},{"id":"stat_fun","name":"Fun","icon":"🎮","desc":"Recovery is part of the game","xp":0,"level":1}],"achievements":[],"customAchievements":[],"totalTasksCompleted":0};</script> <!-- Placeholder for HTML Export Injection -->
+    <style>
+        :root {
+            /* Base Theme (Dark Forest) */
+            --bg-dark: #090c15;
+            --bg-panel: #111827;
+            --bg-card: #1f2937;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            
+            --gold: #fbbf24;
+            --gold-dark: #b45309;
+            --elixir: #d946ef;
+            --elixir-dark: #86198f;
+            --dark-elixir: #1e1b4b;
+            --gems: #10b981;
+            
+            --primary: #3b82f6;
+            --primary-hover: #2563eb;
+            --danger: #ef4444;
+            --success: #10b981;
+            
+            --grass-light: #2c5e3b;
+            --grass-base: #1e462a;
+            --grass-dark: #12301c;
+            
+            --nav-height: 70px;
+            --hud-height: 60px;
+        }
+        
+        /* Night Kingdom Theme */
+        [data-theme="night"] {
+            --bg-dark: #0b071a;
+            --grass-base: #2a1b4d;
+            --grass-dark: #170d2b;
+            --bg-panel: #140d26;
+            --bg-card: #1f143a;
+        }
+
+        /* Desert Sands Theme */
+        [data-theme="desert"] {
+            --bg-dark: #1c140a;
+            --grass-base: #c29d59;
+            --grass-dark: #8b6b33;
+            --bg-panel: #2a1d12;
+            --bg-card: #3a2a1a;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; -webkit-tap-highlight-color: transparent; }
+        body { font-family: 'Nunito', sans-serif; background-color: var(--bg-dark); color: var(--text-main); overflow: hidden; touch-action: pan-x pan-y; transition: background-color 0.3s; }
+        h1, h2, h3, .cinzel { font-family: 'Cinzel', serif; }
+
+        /* ================= HUD ================= */
+        #hud { position: fixed; top: 0; left: 0; width: 100%; height: var(--hud-height); background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent); z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 15px; pointer-events: none; }
+        .resource-bar { display: flex; gap: 8px; pointer-events: auto; flex-wrap: wrap; }
+        .res-pill { display: flex; align-items: center; background: rgba(17, 24, 39, 0.85); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 4px 10px 4px 4px; font-size: 13px; font-weight: 700; backdrop-filter: blur(4px); box-shadow: 0 4px 6px rgba(0,0,0,0.3); transition: transform 0.2s; }
+        .res-pill svg { width: 18px; height: 18px; margin-right: 4px; }
+        #res-pill-dark-elixir { display: none; } 
+
+        /* ================= NAVIGATION ================= */
+        #nav { position: fixed; bottom: 0; left: 0; width: 100%; height: var(--nav-height); background: var(--bg-panel); border-top: 1px solid rgba(255,255,255,0.05); z-index: 100; display: flex; justify-content: space-around; align-items: center; padding-bottom: env(safe-area-inset-bottom); box-shadow: 0 -5px 20px rgba(0,0,0,0.5); transition: background-color 0.3s; }
+        .nav-item { display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--text-muted); flex: 1; height: 100%; cursor: pointer; transition: all 0.2s; position: relative; }
+        .nav-item.active { color: var(--gold); transform: translateY(-3px); }
+        .nav-item svg { width: 22px; height: 22px; margin-bottom: 4px; }
+        .nav-item span { font-size: 10px; font-weight: 700; text-transform: uppercase; white-space: nowrap; }
+        
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(245, 158, 11, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+        }
+
+        /* ================= MAIN VIEWS ================= */
+        .view { display: none; position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; padding-top: var(--hud-height); padding-bottom: var(--nav-height); overflow-y: auto; overflow-x: hidden; }
+        .view.active { display: block; }
+
+        /* ================= VILLAGE ================= */
+        #view-village { padding: 0; overflow: hidden; background: radial-gradient(circle at center, var(--grass-base) 0%, var(--grass-dark) 100%); transition: background 0.3s; }
+        #village-scroll { width: 100%; height: 100%; overflow: hidden; position: relative; touch-action: none; cursor: grab; }
+        #village-scroll:active { cursor: grabbing; }
+        
+        #village-map { width: 4000px; height: 4000px; position: absolute; top: 0; left: 0; background-image: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.02) 1px, transparent 1px), radial-gradient(circle at 10% 90%, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 40px 40px; transform-origin: center; }
+        #village-map.edit-mode { background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 20px 20px; }
+        #village-map.edit-mode .building { cursor: move; animation: floatEdit 1s infinite alternate ease-in-out; }
+        @keyframes floatEdit { from { transform: translate(-50%, -50%); } to { transform: translate(-50%, -52%); filter: drop-shadow(0 10px 10px rgba(0,0,0,0.5)); } }
+
+        .btn-edit-layout { position: fixed; top: 70px; right: 15px; z-index: 90; background: rgba(0,0,0,0.7); border: 1px solid var(--gold); color: var(--gold); padding: 8px 12px; border-radius: 8px; font-weight: bold; cursor: pointer; backdrop-filter: blur(4px); }
+        .btn-center-th { position: fixed; top: 70px; left: 15px; z-index: 90; background: rgba(0,0,0,0.7); border: 1px solid var(--primary); color: var(--primary); padding: 8px 12px; border-radius: 8px; font-weight: bold; cursor: pointer; backdrop-filter: blur(4px); }
+        .btn-icon-danger { background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); color: var(--danger); width: 40px; height: 40px; border-radius: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.1s; }
+        .btn-icon-danger:active { transform: translateY(2px); }
+        .btn-icon-edit { background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); color: var(--primary); width: 40px; height: 40px; border-radius: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.1s; }
+        .btn-icon-edit:active { transform: translateY(2px); }
+
+        .prop { position: absolute; opacity: 0.6; pointer-events: none; }
+        .building { position: absolute; width: 100px; height: 100px; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; justify-content: flex-end; cursor: pointer; transition: transform 0.2s; }
+        .building:hover { transform: translate(-50%, -55%) scale(1.05); z-index: 50 !important; }
+        .bldg-shadow { position: absolute; bottom: 10px; width: 80px; height: 30px; background: rgba(0,0,0,0.4); border-radius: 50%; filter: blur(4px); z-index: 1; pointer-events: none;}
+        
+        .bldg-sprite { position: relative; z-index: 2; width: 80px; height: 80px; background-image: linear-gradient(135deg, #374151, #1f2937); border-radius: 12px; border: 2px solid #4b5563; border-bottom: 8px solid #111827; display: flex; align-items: center; justify-content: center; box-shadow: inset 0 2px 5px rgba(255,255,255,0.1), 0 5px 15px rgba(0,0,0,0.5); background-size: cover; background-position: center; pointer-events: none; font-size: 40px;}
+        .building.town-hall .bldg-sprite { width: 110px; height: 110px; background-image: linear-gradient(135deg, #1e3a8a, #172554); border-color: #3b82f6; border-bottom: 12px solid #0f172a; border-radius: 16px; }
+        .building.town-hall .bldg-sprite::after { content: '🏰'; font-size: 50px; }
+        .building.bounty-board .bldg-sprite { background-image: linear-gradient(135deg, #7f1d1d, #450a0a); border-color: #ef4444; border-radius: 8px; }
+        .building.bounty-board .bldg-sprite::after { content: '📜'; }
+        .building.habit-shrine .bldg-sprite { border-radius: 50px 50px 10px 10px; background-image: linear-gradient(135deg, #4c1d95, #2e1065); border-color: #8b5cf6; }
+
+        .bldg-name { position: absolute; top: -25px; background: rgba(0,0,0,0.7); padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 700; color: #fff; white-space: nowrap; z-index: 3; pointer-events: none; border: 1px solid rgba(255,255,255,0.1); }
+        .bldg-level { position: absolute; bottom: -5px; background: var(--gold); color: #000; padding: 2px 6px; border-radius: 6px; font-size: 10px; font-weight: 900; z-index: 4; box-shadow: 0 2px 4px rgba(0,0,0,0.5); pointer-events: none;}
+
+        .upgrade-bar-container { position: absolute; top: -40px; width: 80px; height: 8px; background: rgba(0,0,0,0.8); border-radius: 4px; border: 1px solid #444; z-index: 5; overflow: hidden; pointer-events: none;}
+        .upgrade-bar-fill { height: 100%; background: var(--success); width: 0%; transition: width 1s linear; }
+
+        /* ================= GENERAL LIST COMPONENTS ================= */
+        .container { padding: 20px; max-width: 800px; margin: 0 auto; }
+        .header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .header-row h2 { font-size: 22px; color: var(--gold); text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+        .btn-primary { background: linear-gradient(135deg, var(--primary), var(--primary-hover)); color: white; border: none; padding: 10px 16px; border-radius: 12px; font-weight: 700; font-family: 'Nunito', sans-serif; cursor: pointer; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); transition: transform 0.1s, box-shadow 0.1s; }
+        .btn-primary:active { transform: translateY(2px); box-shadow: 0 2px 3px rgba(0,0,0,0.3); }
+
+        /* Challenge Banner */
+        .challenge-banner { background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.4); border-radius: 12px; padding: 15px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        .challenge-banner h3 { font-family: 'Cinzel', serif; color: #c4b5fd; margin-bottom: 8px; font-size: 16px; }
+        .challenge-banner p { font-size: 13px; color: var(--text-main); margin-bottom: 12px; }
+        .challenge-progress-bg { background: rgba(0,0,0,0.5); height: 10px; border-radius: 5px; overflow: hidden; margin-bottom: 5px; }
+        .challenge-progress-fill { background: var(--gold); height: 100%; transition: width 0.3s; }
+        .challenge-progress-text { font-size: 11px; font-weight: bold; color: var(--gold); text-align: right; }
+
+        /* Habits */
+        .habit-card { background: var(--bg-card); border-radius: 16px; padding: 16px; margin-bottom: 16px; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 8px 16px rgba(0,0,0,0.2); position: relative; overflow: hidden; transition: background-color 0.3s; }
+        .habit-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .habit-title-area { display: flex; align-items: center; gap: 12px; }
+        .habit-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; color: white; box-shadow: inset 0 -3px 0 rgba(0,0,0,0.2); background-size: cover; background-position: center; }
+        .habit-name { font-size: 16px; font-weight: 800; display: flex; align-items: center; gap: 6px; flex-wrap: wrap;}
+        .stat-badge { font-size: 11px; background: rgba(0,0,0,0.4); padding: 2px 6px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1); }
+        .habit-streak { font-size: 12px; color: var(--text-muted); display: flex; align-items: center; gap: 4px; }
+        .habit-actions { display: flex; gap: 8px; }
+        .btn-complete { background: var(--success); color: white; border: none; width: 40px; height: 40px; border-radius: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 0 #047857; transition: all 0.1s; }
+        .btn-complete:active { transform: translateY(4px); box-shadow: 0 0 0 #047857; }
+        .btn-complete:disabled { background: #374151; box-shadow: 0 4px 0 #1f2937; color: #9ca3af; cursor: not-allowed; }
+
+        .habit-grid-container { display: flex; gap: 4px; justify-content: flex-end; margin-top: 10px; }
+        .grid-col { display: flex; flex-direction: column; gap: 4px; }
+        .grid-cell { width: 14px; height: 14px; border-radius: 3px; background: rgba(255,255,255,0.05); }
+
+        /* Tasks */
+        #view-war { background: radial-gradient(circle at top, #3f1515 0%, var(--bg-dark) 80%); }
+        .bounty-card { background: linear-gradient(145deg, #2a1515, #150a0a); border-radius: 12px; border: 1px solid #5a2a2a; padding: 16px; margin-bottom: 12px; position: relative; box-shadow: 0 10px 20px rgba(0,0,0,0.5); display: flex; justify-content: space-between; align-items: center; }
+        .bounty-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--danger); border-radius: 12px 0 0 12px; }
+        .bounty-info h3 { font-size: 16px; margin-bottom: 4px; font-weight: 800; display: flex; align-items: center; gap: 6px;}
+        .bounty-info p { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
+        .bounty-loot { display: flex; gap: 10px; flex-wrap: wrap;}
+        .loot-tag { display: flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 700; background: rgba(0,0,0,0.5); padding: 2px 8px; border-radius: 10px; color: var(--gold); }
+        .btn-attack { background: linear-gradient(135deg, var(--danger), #991b1b); color: white; border: none; padding: 8px 16px; border-radius: 8px; font-weight: 800; text-transform: uppercase; cursor: pointer; box-shadow: 0 4px 0 #7f1d1d; }
+        
+        .bounty-card.completed { background: linear-gradient(145deg, #111827, #090c15); border: 1px solid #1f2937; opacity: 0.7; }
+        .bounty-card.completed::before { background: var(--text-muted); }
+        .bounty-card.completed h3 { text-decoration: line-through; color: var(--text-muted); }
+
+        /* Journal */
+        .journal-form { background: var(--bg-panel); border: 1px solid rgba(255,255,255,0.05); padding: 20px; border-radius: 16px; margin-bottom: 25px; }
+        .journal-form textarea { width: 100%; background: var(--bg-dark); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 12px; border-radius: 8px; font-family: 'Nunito', sans-serif; outline: none; resize: vertical; min-height: 60px; margin-bottom: 15px; }
+        .journal-form textarea:disabled { opacity: 0.7; }
+        .journal-slider { width: 100%; margin-bottom: 15px; }
+        .journal-entry-card { background: var(--bg-card); border-radius: 12px; padding: 15px; margin-bottom: 10px; border: 1px solid rgba(255,255,255,0.05); cursor: pointer; }
+        .journal-entry-content { display: none; margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.05); font-size: 13px; color: var(--text-muted); }
+        .journal-entry-card.expanded .journal-entry-content { display: block; }
+
+        /* ================= STATS & ACHIEVEMENTS ================= */
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+        .stat-card { background: var(--bg-card); border-radius: 12px; padding: 12px; border: 1px solid rgba(255,255,255,0.05); transition: background-color 0.3s; }
+        .stat-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
+        .stat-name { font-weight: 800; font-size: 14px; }
+        .stat-lvl { color: var(--gold); font-size: 12px; font-weight: 900; }
+        .stat-desc { font-size: 10px; color: var(--text-muted); margin-bottom: 8px; font-style: italic; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .stat-bar-bg { background: rgba(0,0,0,0.5); height: 12px; border-radius: 6px; overflow: hidden; position: relative;}
+        .stat-bar-fill { background: var(--primary); height: 100%; transition: width 0.3s; }
+        .stat-bar-text { position: absolute; width: 100%; text-align: center; font-size: 9px; line-height: 12px; color: #fff; top: 0; font-weight:bold; }
+        
+        .achievements-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 20px;}
+        .achievement-badge { background: var(--bg-panel); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 10px; text-align: center; font-size: 24px; transition: all 0.2s; position: relative; }
+        .achievement-badge.locked { filter: grayscale(1) opacity(0.3); }
+        .achievement-name { font-size: 9px; font-weight: bold; color: var(--text-main); margin-top: 4px; line-height: 1.1; }
+
+        /* ================= SETTINGS ================= */
+        .settings-panel { background: var(--bg-panel); border-radius: 16px; padding: 20px; border: 1px solid rgba(255,255,255,0.05); margin-bottom:20px; transition: background-color 0.3s;}
+        .settings-btn { width: 100%; padding: 12px; background: var(--bg-card); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 8px; margin-bottom: 10px; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+        .settings-btn:hover { background: #374151; }
+        .settings-btn.danger { color: var(--danger); border-color: rgba(239, 68, 68, 0.3); }
+
+        /* ================= MODALS ================= */
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); backdrop-filter: blur(5px); z-index: 1000; justify-content: center; align-items: center; }
+        .modal-overlay.active { display: flex; }
+        .modal-content { background: var(--bg-panel); width: 90%; max-width: 400px; max-height: 90vh; overflow-y: auto; border-radius: 20px; padding: 24px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.5); transform: translateY(20px); opacity: 0; animation: modalIn 0.3s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        @keyframes modalIn { to { transform: translateY(0); opacity: 1; } }
+        .modal-header { font-family: 'Cinzel', serif; font-size: 22px; color: var(--gold); margin-bottom: 20px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
+        .form-group { margin-bottom: 16px; }
+        .form-group label { display: block; font-size: 12px; color: var(--text-muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1px; }
+        .form-group input, .form-group select { width: 100%; background: var(--bg-dark); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 12px; border-radius: 8px; font-family: 'Nunito', sans-serif; outline: none; }
+        
+        .radio-group { display: flex; gap: 10px; margin-bottom: 10px; }
+        .radio-group label { flex: 1; text-align: center; background: var(--bg-dark); padding: 8px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; font-size: 14px; font-weight: bold; }
+        .radio-group input[type="radio"] { display: none; }
+        .radio-group input[type="radio"]:checked + label { background: rgba(59, 130, 246, 0.2); border-color: var(--primary); color: var(--primary); }
+
+        .file-upload-wrapper { position: relative; overflow: hidden; display: inline-block; width: 100%; }
+        .file-upload-btn { background: var(--bg-card); border: 1px dashed rgba(255,255,255,0.3); color: var(--text-muted); padding: 12px; width: 100%; text-align: center; border-radius: 8px; cursor: pointer; }
+        .file-upload-wrapper input[type=file] { font-size: 100px; position: absolute; left: 0; top: 0; opacity: 0; cursor: pointer; }
+
+        .modal-actions { display: flex; gap: 10px; margin-top: 24px; }
+        .btn-cancel { flex: 1; background: transparent; border: 1px solid rgba(255,255,255,0.2); color: white; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 700; }
+        .btn-submit { flex: 2; background: var(--gold); color: black; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 800; box-shadow: 0 4px 0 var(--gold-dark); }
+        .btn-submit:active { transform: translateY(4px); box-shadow: 0 0 0; }
+
+        .stats-list { max-height: 200px; overflow-y: auto; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: var(--bg-dark); }
+        .stat-list-item { display: flex; justify-content: space-between; align-items: center; padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .stat-list-item:last-child { border-bottom: none; }
+
+        /* FX */
+        #fx-layer { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 999; }
+        .floating-text { position: absolute; font-weight: 900; font-size: 20px; text-shadow: 0 2px 4px rgba(0,0,0,0.8); animation: floatUp 1.5s forwards ease-out; }
+        @keyframes floatUp { 0% { transform: translateY(0) scale(0.5); opacity: 0; } 20% { transform: translateY(-20px) scale(1.2); opacity: 1; } 100% { transform: translateY(-80px) scale(1); opacity: 0; } }
+        .screen-flash { position: absolute; inset: 0; background: white; opacity: 0; animation: flash 0.3s forwards; pointer-events: none;}
+        @keyframes flash { 0% { opacity: 0.3; } 100% { opacity: 0; } }
+        #toast-container { position: fixed; top: 80px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; gap: 10px; z-index: 2000; pointer-events: none; }
+        .toast { background: rgba(17, 24, 39, 0.95); color: white; padding: 10px 20px; border-radius: 30px; font-weight: 700; font-size: 14px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); animation: toastIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; opacity: 0; cursor: pointer; }
+        @keyframes toastIn { to { transform: translateY(0) scale(1); opacity: 1; } from { transform: translateY(-20px) scale(0.8); opacity: 0; } }
+
+    </style>
+</head>
+<body>
+
+    <!-- HUD Top Bar -->
+    <div id="hud">
+        <div class="resource-bar">
+            <div class="res-pill" style="color: var(--gold);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                <span id="res-gold">500</span>
+            </div>
+            <div class="res-pill" style="color: var(--elixir);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                <span id="res-elixir">500</span>
+            </div>
+            <div class="res-pill" id="res-pill-dark-elixir" style="color: rgb(99, 102, 241); display: none;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path><circle cx="12" cy="14" r="3" fill="currentColor"></circle></svg>
+                <span id="res-dark-elixir">0</span>
+            </div>
+            <div class="res-pill" style="color: var(--gems);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 22 22 7 12 2"></polygon></svg>
+                <span id="res-gems">10</span>
+            </div>
+        </div>
+        <div class="resource-bar">
+            <div class="res-pill" style="color: #9ca3af;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                <span id="res-builders">2/2</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- VIEWS -->
+    
+    <!-- 1. Village (DEFAULT) -->
+    <div id="view-village" class="view">
+        <button class="btn-center-th" onclick="centerTownHall()">🎯 Find Town Hall</button>
+        <button class="btn-edit-layout" id="btn-edit-layout" onclick="toggleEditMode()">🏗️ Edit Layout</button>
+        <div id="village-scroll">
+            <div id="village-map">
+                <!-- JS Will Render Buildings & Terrain Here -->
+            <div class="prop" style="left: 3327.88px; top: 2091.3px; font-size: 13.7609px;">🪨</div><div class="prop" style="left: 205.66px; top: 1748.85px; font-size: 18.0159px;">🌳</div><div class="prop" style="left: 337.809px; top: 1070.85px; font-size: 10.3541px;">🌳</div><div class="prop" style="left: 617.393px; top: 365.182px; font-size: 15.5078px;">🪨</div><div class="prop" style="left: 2047.3px; top: 1854.17px; font-size: 11.5106px;">🌲</div><div class="prop" style="left: 3449.09px; top: 3750.64px; font-size: 19.9007px;">🪨</div><div class="prop" style="left: 1229.49px; top: 846.078px; font-size: 12.002px;">🪨</div><div class="prop" style="left: 1881.14px; top: 1601.87px; font-size: 10.0968px;">🪨</div><div class="prop" style="left: 541.106px; top: 2430.45px; font-size: 15.4673px;">🪨</div><div class="prop" style="left: 2840.45px; top: 3107.1px; font-size: 12.5311px;">🌲</div><div class="prop" style="left: 247.299px; top: 2228.99px; font-size: 12.1237px;">🌳</div><div class="prop" style="left: 3019.7px; top: 102.115px; font-size: 17.4611px;">🌲</div><div class="prop" style="left: 1322.23px; top: 567.79px; font-size: 13.3991px;">🪨</div><div class="prop" style="left: 288.971px; top: 3559.54px; font-size: 16.2539px;">🌳</div><div class="prop" style="left: 227.227px; top: 2578.25px; font-size: 17.9546px;">🪨</div><div class="prop" style="left: 2865.1px; top: 3079.23px; font-size: 18.7554px;">🌳</div><div class="prop" style="left: 1439.09px; top: 18.774px; font-size: 14.4948px;">🌲</div><div class="prop" style="left: 1685.44px; top: 982.569px; font-size: 19.1702px;">🌲</div><div class="prop" style="left: 734.429px; top: 3832.57px; font-size: 14.3034px;">🪨</div><div class="prop" style="left: 3292.38px; top: 3031.73px; font-size: 14.8931px;">🌳</div><div class="prop" style="left: 3490.74px; top: 3606.41px; font-size: 17.9739px;">🪨</div><div class="prop" style="left: 252.608px; top: 3283.99px; font-size: 13.0327px;">🪨</div><div class="prop" style="left: 1313.02px; top: 398.475px; font-size: 12.2755px;">🌳</div><div class="prop" style="left: 2892.78px; top: 3739.06px; font-size: 10.2704px;">🌲</div><div class="prop" style="left: 532.393px; top: 1208.94px; font-size: 12.3934px;">🪨</div><div class="prop" style="left: 2571px; top: 1721.73px; font-size: 18.8606px;">🌳</div><div class="prop" style="left: 2724.98px; top: 2956.47px; font-size: 12.9619px;">🪨</div><div class="prop" style="left: 3527.43px; top: 1796.83px; font-size: 14.3906px;">🌳</div><div class="prop" style="left: 1250.88px; top: 2020.8px; font-size: 18.6081px;">🌲</div><div class="prop" style="left: 611.874px; top: 3581.72px; font-size: 16.97px;">🌳</div><div class="prop" style="left: 2607.95px; top: 232.779px; font-size: 16.5777px;">🌳</div><div class="prop" style="left: 1466.85px; top: 1662.57px; font-size: 17.1911px;">🌲</div><div class="prop" style="left: 1932.08px; top: 2581.66px; font-size: 10.8924px;">🌲</div><div class="prop" style="left: 1074.28px; top: 2308.7px; font-size: 10.4565px;">🪨</div><div class="prop" style="left: 2777.3px; top: 2912px; font-size: 12.7548px;">🌲</div><div class="prop" style="left: 650.516px; top: 1893.04px; font-size: 19.2809px;">🌳</div><div class="prop" style="left: 2466.27px; top: 1062.69px; font-size: 14.671px;">🌲</div><div class="prop" style="left: 126.621px; top: 2742.05px; font-size: 14.5945px;">🌳</div><div class="prop" style="left: 2222.72px; top: 1334.11px; font-size: 16.6584px;">🌲</div><div class="prop" style="left: 3558.71px; top: 712.65px; font-size: 18.1475px;">🪨</div><div class="prop" style="left: 2664.61px; top: 3866.9px; font-size: 18.1178px;">🌲</div><div class="prop" style="left: 2656.87px; top: 357.541px; font-size: 16.3819px;">🪨</div><div class="prop" style="left: 2083.24px; top: 972.362px; font-size: 13.0136px;">🌲</div><div class="prop" style="left: 1603.53px; top: 3372.66px; font-size: 10.9036px;">🪨</div><div class="prop" style="left: 3749.28px; top: 336.075px; font-size: 19.2944px;">🪨</div><div class="prop" style="left: 2515.11px; top: 504.457px; font-size: 16.504px;">🌲</div><div class="prop" style="left: 3161.49px; top: 2454.72px; font-size: 12.4882px;">🌲</div><div class="prop" style="left: 2783.59px; top: 474.098px; font-size: 14.8228px;">🌲</div><div class="prop" style="left: 88.5862px; top: 903.053px; font-size: 14.28px;">🌲</div><div class="prop" style="left: 1041.51px; top: 3366.56px; font-size: 13.8286px;">🌲</div><div class="prop" style="left: 951.756px; top: 2933.22px; font-size: 12.5477px;">🪨</div><div class="prop" style="left: 3871.6px; top: 1499.32px; font-size: 14.2141px;">🌲</div><div class="prop" style="left: 1278.27px; top: 944.384px; font-size: 11.9528px;">🌳</div><div class="prop" style="left: 1294.43px; top: 3121.58px; font-size: 15.2006px;">🌲</div><div class="prop" style="left: 2444.16px; top: 3309.13px; font-size: 18.5647px;">🌲</div><div class="prop" style="left: 108.689px; top: 3815.81px; font-size: 10.4896px;">🪨</div><div class="prop" style="left: 3343.86px; top: 3230.78px; font-size: 14.96px;">🪨</div><div class="prop" style="left: 1725.54px; top: 2746.29px; font-size: 16.6038px;">🌲</div><div class="prop" style="left: 3810.87px; top: 2347.01px; font-size: 13.1319px;">🌲</div><div class="prop" style="left: 2953.94px; top: 1398.26px; font-size: 11.6121px;">🪨</div><div class="prop" style="left: 1210.14px; top: 3837.4px; font-size: 18.2803px;">🪨</div><div class="prop" style="left: 2786.38px; top: 521.192px; font-size: 13.4833px;">🌳</div><div class="prop" style="left: 3825.11px; top: 901.045px; font-size: 11.4279px;">🪨</div><div class="prop" style="left: 286.982px; top: 669.053px; font-size: 11.7747px;">🌲</div><div class="prop" style="left: 349.024px; top: 3061.39px; font-size: 16.8006px;">🌳</div><div class="prop" style="left: 2894.39px; top: 2871.56px; font-size: 10.0111px;">🌲</div><div class="prop" style="left: 343.433px; top: 431.438px; font-size: 12.2661px;">🪨</div><div class="prop" style="left: 3428.81px; top: 1583.97px; font-size: 14.6527px;">🌳</div><div class="prop" style="left: 458.263px; top: 2273.34px; font-size: 11.1747px;">🌳</div><div class="prop" style="left: 466.2px; top: 3695.01px; font-size: 16.1909px;">🌲</div><div class="prop" style="left: 223.208px; top: 2340.73px; font-size: 13.1714px;">🌲</div><div class="prop" style="left: 3394.93px; top: 3481.79px; font-size: 17.3224px;">🌲</div><div class="prop" style="left: 2514.45px; top: 3361.39px; font-size: 14.248px;">🌲</div><div class="prop" style="left: 3697.83px; top: 3540.7px; font-size: 11.7031px;">🪨</div><div class="prop" style="left: 1042.22px; top: 3431.81px; font-size: 13.3467px;">🪨</div><div class="prop" style="left: 3449.38px; top: 1425.75px; font-size: 14.1515px;">🌳</div><div class="prop" style="left: 276.367px; top: 79.557px; font-size: 13.048px;">🌳</div><div class="prop" style="left: 1604.11px; top: 3638.47px; font-size: 14.6816px;">🌲</div><div class="prop" style="left: 3267.53px; top: 1281.1px; font-size: 17.2645px;">🌲</div><div class="prop" style="left: 3882px; top: 2510.8px; font-size: 10.4794px;">🪨</div><div class="prop" style="left: 2652.98px; top: 2457.38px; font-size: 19.9746px;">🌲</div><div class="prop" style="left: 1484.41px; top: 3075.46px; font-size: 12.5594px;">🪨</div><div class="prop" style="left: 481.357px; top: 3064.26px; font-size: 17.8597px;">🌲</div><div class="prop" style="left: 3142.63px; top: 3844.48px; font-size: 17.6602px;">🌲</div><div class="prop" style="left: 2381.06px; top: 2002.84px; font-size: 14.3185px;">🌳</div><div class="prop" style="left: 3324.47px; top: 3066.39px; font-size: 18.6946px;">🌲</div><div class="prop" style="left: 2540.78px; top: 3781.65px; font-size: 16.8038px;">🌲</div><div class="prop" style="left: 1576.15px; top: 69.3498px; font-size: 19.676px;">🌲</div><div class="prop" style="left: 3157.59px; top: 1203.31px; font-size: 19.8435px;">🌲</div><div class="prop" style="left: 304.269px; top: 1761.32px; font-size: 12.7322px;">🪨</div><div class="prop" style="left: 2646px; top: 2018.41px; font-size: 19.8136px;">🪨</div><div class="prop" style="left: 135.118px; top: 3932.78px; font-size: 16.3898px;">🌲</div><div class="prop" style="left: 1664.57px; top: 718.746px; font-size: 18.8349px;">🌲</div><div class="prop" style="left: 409.322px; top: 3720.08px; font-size: 18.444px;">🌲</div><div class="prop" style="left: 1261.57px; top: 3708.72px; font-size: 10.5739px;">🌳</div><div class="prop" style="left: 633.794px; top: 3407.86px; font-size: 15.6824px;">🌲</div><div class="prop" style="left: 3544.74px; top: 3364.77px; font-size: 12.664px;">🪨</div><div class="prop" style="left: 1179.49px; top: 2746.08px; font-size: 11.5185px;">🌳</div><div class="prop" style="left: 2206.37px; top: 2521.86px; font-size: 15.7604px;">🌳</div><div class="prop" style="left: 2002.41px; top: 3502.5px; font-size: 16.0752px;">🪨</div><div class="prop" style="left: 74.6227px; top: 3299.55px; font-size: 12.3978px;">🌲</div><div class="prop" style="left: 2333.49px; top: 2440.49px; font-size: 15.4717px;">🌲</div><div class="prop" style="left: 1266.11px; top: 3874.54px; font-size: 16.1509px;">🌳</div><div class="prop" style="left: 3714.81px; top: 193.871px; font-size: 18.4179px;">🌳</div><div class="prop" style="left: 238.698px; top: 1797.16px; font-size: 12.8154px;">🌲</div><div class="prop" style="left: 2924.04px; top: 752.746px; font-size: 19.6171px;">🌲</div><div class="prop" style="left: 2964.43px; top: 2899.14px; font-size: 13.4164px;">🌲</div><div class="prop" style="left: 1135.99px; top: 452.642px; font-size: 16.9427px;">🌲</div><div class="prop" style="left: 1641.23px; top: 55.8929px; font-size: 10.0859px;">🌲</div><div class="prop" style="left: 108.315px; top: 2025.05px; font-size: 12.5493px;">🌲</div><div class="prop" style="left: 712.787px; top: 2561.91px; font-size: 11.8643px;">🌲</div><div class="prop" style="left: 3731.1px; top: 3100.07px; font-size: 11.8743px;">🌲</div><div class="prop" style="left: 1181.11px; top: 1626.67px; font-size: 11.8874px;">🌲</div><div class="prop" style="left: 1890.74px; top: 611.53px; font-size: 19.2139px;">🌳</div><div class="prop" style="left: 2367.4px; top: 1387.64px; font-size: 15.1929px;">🌲</div><div class="prop" style="left: 1028.34px; top: 37.534px; font-size: 18.2798px;">🌲</div><div class="prop" style="left: 334.61px; top: 2182.96px; font-size: 16.289px;">🪨</div><div class="prop" style="left: 3654.55px; top: 141.945px; font-size: 12.9377px;">🌳</div><div class="prop" style="left: 3740.86px; top: 1457.84px; font-size: 13.939px;">🌳</div><div class="prop" style="left: 152.001px; top: 116.035px; font-size: 14.8145px;">🌲</div><div class="prop" style="left: 2928.56px; top: 148.045px; font-size: 19.9736px;">🪨</div><div class="prop" style="left: 2089.12px; top: 3248.39px; font-size: 10.6886px;">🌲</div><div class="prop" style="left: 147.644px; top: 3775.55px; font-size: 16.1827px;">🌳</div><div class="prop" style="left: 1326.37px; top: 516.759px; font-size: 11.4729px;">🌲</div><div class="prop" style="left: 3414.31px; top: 2481.18px; font-size: 19.6014px;">🌳</div><div class="prop" style="left: 91.126px; top: 837.973px; font-size: 18.7683px;">🌳</div><div class="prop" style="left: 179.006px; top: 2354.14px; font-size: 12.4416px;">🪨</div><div class="prop" style="left: 1096.17px; top: 705.141px; font-size: 12.4061px;">🌲</div><div class="prop" style="left: 3318.18px; top: 1824.26px; font-size: 10.9123px;">🌳</div><div class="prop" style="left: 502.183px; top: 384.312px; font-size: 15.8354px;">🌲</div><div class="prop" style="left: 2394.63px; top: 1109.43px; font-size: 13.3261px;">🌲</div><div class="prop" style="left: 1900.17px; top: 2655.19px; font-size: 12.0213px;">🌲</div><div class="prop" style="left: 183.352px; top: 187.281px; font-size: 12.4703px;">🌲</div><div class="prop" style="left: 1830.44px; top: 2680.48px; font-size: 16.716px;">🌳</div><div class="prop" style="left: 1151.3px; top: 2316.95px; font-size: 11.535px;">🌳</div><div class="prop" style="left: 2181.35px; top: 1585.85px; font-size: 19.8389px;">🪨</div><div class="prop" style="left: 1825.17px; top: 2013.79px; font-size: 10.3056px;">🌳</div><div class="prop" style="left: 1250.46px; top: 2707.95px; font-size: 17.0647px;">🪨</div><div class="prop" style="left: 798.389px; top: 3460.91px; font-size: 11.3281px;">🪨</div><div class="prop" style="left: 1588.01px; top: 3595.06px; font-size: 13.1911px;">🪨</div><div class="prop" style="left: 2386.32px; top: 779.459px; font-size: 15.7441px;">🌲</div><div class="prop" style="left: 655.248px; top: 1130.42px; font-size: 17.491px;">🪨</div><div class="prop" style="left: 283.409px; top: 3645.01px; font-size: 10.768px;">🌲</div><div class="prop" style="left: 3156.94px; top: 2477.28px; font-size: 11.3423px;">🌳</div><div class="prop" style="left: 3184.34px; top: 1663.71px; font-size: 11.3265px;">🌲</div><div class="prop" style="left: 1821.03px; top: 171.334px; font-size: 12.0995px;">🌲</div><div class="prop" style="left: 1510.25px; top: 3254.15px; font-size: 11.711px;">🌳</div><div class="prop" style="left: 3183.38px; top: 2755.2px; font-size: 10.2734px;">🌲</div><div class="prop" style="left: 1499.92px; top: 404.129px; font-size: 14.4903px;">🌲</div><div class="prop" style="left: 3556.95px; top: 323.721px; font-size: 19.6388px;">🌲</div><div class="building town-hall" data-id="th_1" style="left: 2000px; top: 2000px;">
+                    <div class="bldg-shadow"></div>
+                    <div class="bldg-name">Town Hall</div>
+                    <div class="bldg-sprite" style=""></div>
+                    <div class="bldg-level">Lv.1</div>
+                </div><div class="building bounty-board" data-id="bboard_1" style="left: 2150px; top: 2050px;">
+                    <div class="bldg-shadow"></div>
+                    <div class="bldg-name">Bounty Board</div>
+                    <div class="bldg-sprite" style=""></div>
+                    <div class="bldg-level">Lv.1</div>
+                </div></div>
+        </div>
+    </div>
+
+    <!-- 2. Habits -->
+    <div id="view-habits" class="view">
+        <div class="container">
+            <div class="header-row">
+                <h2 class="cinzel">Habit Shrines</h2>
+                <button class="btn-primary" onclick="openHabitModal()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    New Habit
+                </button>
+            </div>
+            <div id="challenge-container">
+                    <div class="challenge-banner">
+                        <h3>⚔️ Weekly Challenge</h3>
+                        <p>Complete 5 bounties this week</p>
+                        <div class="challenge-progress-bg">
+                            <div class="challenge-progress-fill" style="width:0%"></div>
+                        </div>
+                        <div class="challenge-progress-text">0 / 5</div>
+                        
+                    </div>
+                </div>
+            <div id="habits-container"><div style="text-align:center; color: var(--text-muted); padding: 40px;">No habits formed yet. Build a shrine to begin.</div></div>
+        </div>
+    </div>
+
+    <!-- 3. War Room (Tasks) -->
+    <div id="view-war" class="view">
+        <div class="container">
+            <div class="header-row">
+                <h2 class="cinzel" style="color: var(--danger);">War Board</h2>
+                <button class="btn-primary" style="background: linear-gradient(135deg, var(--danger), #991b1b);" onclick="openTaskModal()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    Post Bounty
+                </button>
+            </div>
+            <p style="color: var(--text-muted); margin-bottom: 20px;">Complete one-off missions to earn massive loot.</p>
+            <div id="tasks-container"><div style="text-align:center; color: var(--text-muted); padding: 40px;">The realm is peaceful. No active bounties.</div></div>
+            
+            <div style="margin-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 15px;">
+                    <button class="btn-cancel" style="flex:none; padding:6px 12px; font-size:12px;" onclick="toggleCompletedTasks()" id="btn-toggle-completed">📜 Show/Hide Completed (0)</button>
+                    <button class="btn-cancel" style="flex:none; padding:6px 12px; font-size:12px; color:var(--danger); border-color:rgba(239,68,68,0.3);" onclick="clearCompletedTasks()">Clear History</button>
+                </div>
+                <div id="completed-tasks-container" style="display:none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Journal View -->
+    <div id="view-journal" class="view">
+        <div class="container">
+            <div class="header-row" style="margin-bottom:5px;">
+                <h2 class="cinzel">Daily Check-In</h2>
+            </div>
+            <p style="color: var(--gold); margin-bottom: 20px; font-weight:bold;" id="journal-date-display">Sun May 17 2026</p>
+            
+            <div class="journal-form" id="journal-form-container">
+                <label style="display:block; font-size:12px; color:var(--text-muted); margin-bottom:6px; text-transform:uppercase;">⚔️ What did I conquer today?</label>
+                <textarea id="journal-conquer" placeholder="Great victories or small wins..."></textarea>
+                
+                <label style="display:block; font-size:12px; color:var(--text-muted); margin-bottom:6px; text-transform:uppercase;">🛡️ What challenged me?</label>
+                <textarea id="journal-challenge" placeholder="Obstacles faced..."></textarea>
+                
+                <label style="display:block; font-size:12px; color:var(--text-muted); margin-bottom:6px; text-transform:uppercase;">⚡ Energy level today: <span id="journal-energy-val" style="color:var(--gold);">4</span></label>
+                <input type="range" id="journal-energy" class="journal-slider" min="1" max="5" value="3" oninput="document.getElementById('journal-energy-val').innerText=this.value">
+                
+                <label style="display:block; font-size:12px; color:var(--text-muted); margin-bottom:6px; text-transform:uppercase; margin-top:10px;">📈 What will I improve tomorrow?</label>
+                <textarea id="journal-improve" placeholder="One thing to do better..."></textarea>
+                
+                <label style="display:block; font-size:12px; color:var(--text-muted); margin-bottom:6px; text-transform:uppercase;">🙏 What am I grateful for?</label>
+                <textarea id="journal-grateful" placeholder="Appreciate the small things..."></textarea>
+                
+                <button class="btn-submit" style="width: 100%; margin-top: 10px; display: block;" id="btn-submit-journal" onclick="submitJournal()">Submit Check-In (+25 Gold, +10 Elixir)</button>
+                <p id="journal-already-logged" style="display:none; color:var(--success); text-align:center; margin-top:15px; font-weight:bold;">✅ Already logged today</p>
+            </div>
+            
+            <h3 class="cinzel" style="margin: 30px 0 15px; color: white; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">Past Entries</h3>
+            <div id="journal-history-container"><p style="color:var(--text-muted); font-size:12px; text-align:center;">No past entries.</p></div>
+        </div>
+    </div>
+
+    <!-- 5. Hero Stats -->
+    <div id="view-stats" class="view">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h2 class="cinzel" style="font-size: 28px; color: var(--gold);" id="hero-level-title">Hero's Village - Hero Level 1</h2>
+                <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 10px;">Grow your real-life attributes through discipline and conquest.</p>
+                <button class="btn-primary" style="margin: 0 auto; font-size:12px; padding: 6px 12px;" onclick="openManageStatsModal()">⚙️ Manage Stats</button>
+            </div>
+            <div class="stats-grid" id="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-name">❤️ Health</span>
+                            <span class="stat-lvl">Lv.1</span>
+                        </div>
+                        <div class="stat-desc" title="Body is your fortress">Body is your fortress</div>
+                        <div class="stat-bar-bg">
+                            <div class="stat-bar-fill" style="width: 0%"></div>
+                            <div class="stat-bar-text">0 / 50 XP</div>
+                        </div>
+                    </div>
+                
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-name">💰 Wealth</span>
+                            <span class="stat-lvl">Lv.1</span>
+                        </div>
+                        <div class="stat-desc" title="Gold flows to the disciplined">Gold flows to the disciplined</div>
+                        <div class="stat-bar-bg">
+                            <div class="stat-bar-fill" style="width: 0%"></div>
+                            <div class="stat-bar-text">0 / 50 XP</div>
+                        </div>
+                    </div>
+                
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-name">⚔️ Career</span>
+                            <span class="stat-lvl">Lv.1</span>
+                        </div>
+                        <div class="stat-desc" title="Your blade sharpens with every battle">Your blade sharpens with every battle</div>
+                        <div class="stat-bar-bg">
+                            <div class="stat-bar-fill" style="width: 0%"></div>
+                            <div class="stat-bar-text">0 / 50 XP</div>
+                        </div>
+                    </div>
+                
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-name">📚 Skill</span>
+                            <span class="stat-lvl">Lv.1</span>
+                        </div>
+                        <div class="stat-desc" title="Knowledge is the mightiest weapon">Knowledge is the mightiest weapon</div>
+                        <div class="stat-bar-bg">
+                            <div class="stat-bar-fill" style="width: 0%"></div>
+                            <div class="stat-bar-text">0 / 50 XP</div>
+                        </div>
+                    </div>
+                
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-name">🤝 Relationships</span>
+                            <span class="stat-lvl">Lv.1</span>
+                        </div>
+                        <div class="stat-desc" title="No hero survives alone">No hero survives alone</div>
+                        <div class="stat-bar-bg">
+                            <div class="stat-bar-fill" style="width: 0%"></div>
+                            <div class="stat-bar-text">0 / 50 XP</div>
+                        </div>
+                    </div>
+                
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-name">🛡️ Discipline</span>
+                            <span class="stat-lvl">Lv.1</span>
+                        </div>
+                        <div class="stat-desc" title="Consistency builds empires">Consistency builds empires</div>
+                        <div class="stat-bar-bg">
+                            <div class="stat-bar-fill" style="width: 0%"></div>
+                            <div class="stat-bar-text">0 / 50 XP</div>
+                        </div>
+                    </div>
+                
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-name">🧠 Mindset</span>
+                            <span class="stat-lvl">Lv.1</span>
+                        </div>
+                        <div class="stat-desc" title="Control your mind or it controls you">Control your mind or it controls you</div>
+                        <div class="stat-bar-bg">
+                            <div class="stat-bar-fill" style="width: 0%"></div>
+                            <div class="stat-bar-text">0 / 50 XP</div>
+                        </div>
+                    </div>
+                
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-name">⚡ Energy</span>
+                            <span class="stat-lvl">Lv.1</span>
+                        </div>
+                        <div class="stat-desc" title="Rest is a weapon">Rest is a weapon</div>
+                        <div class="stat-bar-bg">
+                            <div class="stat-bar-fill" style="width: 0%"></div>
+                            <div class="stat-bar-text">0 / 50 XP</div>
+                        </div>
+                    </div>
+                
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-name">🎯 Purpose</span>
+                            <span class="stat-lvl">Lv.1</span>
+                        </div>
+                        <div class="stat-desc" title="Know your why">Know your why</div>
+                        <div class="stat-bar-bg">
+                            <div class="stat-bar-fill" style="width: 0%"></div>
+                            <div class="stat-bar-text">0 / 50 XP</div>
+                        </div>
+                    </div>
+                
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-name">🎮 Fun</span>
+                            <span class="stat-lvl">Lv.1</span>
+                        </div>
+                        <div class="stat-desc" title="Recovery is part of the game">Recovery is part of the game</div>
+                        <div class="stat-bar-bg">
+                            <div class="stat-bar-fill" style="width: 0%"></div>
+                            <div class="stat-bar-text">0 / 50 XP</div>
+                        </div>
+                    </div>
+                </div>
+            
+            <h3 class="cinzel" style="margin: 30px 0 15px; color: white; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">System Achievements</h3>
+            <div class="achievements-grid" id="achievements-container">
+                    <div class="achievement-badge locked" title="First Shrine Built">
+                        🏗️
+                        <div class="achievement-name">First Shrine Built</div>
+                    </div>
+                
+                    <div class="achievement-badge locked" title="Week Warrior">
+                        🔥
+                        <div class="achievement-name">Week Warrior</div>
+                    </div>
+                
+                    <div class="achievement-badge locked" title="Iron Discipline">
+                        🛡️
+                        <div class="achievement-name">Iron Discipline</div>
+                    </div>
+                
+                    <div class="achievement-badge locked" title="First Blood">
+                        🩸
+                        <div class="achievement-name">First Blood</div>
+                    </div>
+                
+                    <div class="achievement-badge locked" title="Veteran Soldier">
+                        ⚔️
+                        <div class="achievement-name">Veteran Soldier</div>
+                    </div>
+                
+                    <div class="achievement-badge locked" title="Rising Champion">
+                        ⭐
+                        <div class="achievement-name">Rising Champion</div>
+                    </div>
+                
+                    <div class="achievement-badge locked" title="Balanced Warrior">
+                        ⚖️
+                        <div class="achievement-name">Balanced Warrior</div>
+                    </div>
+                
+                    <div class="achievement-badge locked" title="Legend of the Realm">
+                        👑
+                        <div class="achievement-name">Legend of the Realm</div>
+                    </div>
+                </div>
+
+            <div style="display:flex; justify-content:space-between; align-items:center; margin: 30px 0 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">
+                <h3 class="cinzel" style="color: white; margin:0;">My Trophies</h3>
+                <button class="btn-primary" style="font-size:12px; padding: 6px 12px;" onclick="openAddAchievementModal()">🏆 Add Trophy</button>
+            </div>
+            <div class="achievements-grid" id="custom-achievements-container"><div style="grid-column: 1/-1; text-align:center; color: var(--text-muted); font-size:12px;">No custom trophies yet. Claim your real-life wins!</div></div>
+        </div>
+    </div>
+
+    <!-- 6. Settings -->
+    <div id="view-settings" class="view active">
+        <div class="container">
+            <h2 class="cinzel" style="margin-bottom: 20px;">Hero Profile</h2>
+            <div class="settings-panel">
+                <div class="form-group">
+                    <label>Hero Name</label>
+                    <input type="text" id="setting-player-name" onchange="updateProfile()" placeholder="Hero">
+                </div>
+                <div class="form-group">
+                    <label>Village Theme</label>
+                    <select id="setting-theme" onchange="updateProfile()">
+                        <option value="forest">Dark Forest</option>
+                        <option value="night">Night Kingdom</option>
+                        <option value="desert">Desert Sands</option>
+                    </select>
+                </div>
+            </div>
+
+            <h2 class="cinzel" style="margin-bottom: 20px;">Settings &amp; Save</h2>
+            <div class="settings-panel">
+                <button class="settings-btn" onclick="exportDataHTML()">📤 Export Save Data (HTML App)</button>
+                <div style="position:relative;">
+                    <input type="file" accept=".html,.json" style="position:absolute; inset:0; opacity:0; cursor:pointer;" onchange="importData(event)">
+                    <button class="settings-btn">📥 Import Save Data</button>
+                </div>
+                <hr style="border-color: rgba(255,255,255,0.05); margin: 20px 0;">
+                <button class="settings-btn danger" onclick="resetData()">⚠️ Reset All Progress</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div id="nav">
+        <div class="nav-item" onclick="switchTab('village', this)">
+            <div id="village-nav-dot" style="display:none; position:absolute; top:6px; right:calc(50% - 14px); width:8px; height:8px; background:orange; border-radius:50%; animation: pulse 1s infinite;"></div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span>Village</span>
+        </div>
+        <div class="nav-item" onclick="switchTab('habits', this)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            <span>Habits</span>
+        </div>
+        <div class="nav-item" onclick="switchTab('war', this)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+            <span>War</span>
+        </div>
+        <div class="nav-item" onclick="switchTab('journal', this)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            <span>Journal</span>
+        </div>
+        <div class="nav-item" onclick="switchTab('stats', this)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span>Stats</span>
+        </div>
+        <div class="nav-item active" onclick="switchTab('settings', this)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            <span>Settings</span>
+        </div>
+    </div>
+
+    <!-- MODALS -->
+    
+    <!-- Confirm Action Modal -->
+    <div id="modal-confirm" class="modal-overlay">
+        <div class="modal-content" style="text-align: center;">
+            <div class="modal-header" id="confirm-title">Confirm</div>
+            <p id="confirm-msg" style="color: var(--text-muted); margin-bottom: 20px; white-space: pre-wrap;">Are you sure?</p>
+            <div class="modal-actions">
+                <button class="btn-cancel" onclick="closeModals()">Cancel</button>
+                <button class="btn-submit" id="btn-confirm-yes">Yes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Manage Stats Modal -->
+    <div id="modal-manage-stats" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">Manage Stats</div>
+            <div class="stats-list" id="manage-stats-list"></div>
+            <hr style="border-color: rgba(255,255,255,0.1); margin: 15px 0;">
+            <div class="form-group">
+                <label>Add New Stat</label>
+                <div style="display:flex; gap:10px;">
+                    <input type="text" id="new-stat-icon" placeholder="Emoji" maxlength="2" style="width: 70px; text-align:center;">
+                    <input type="text" id="new-stat-name" placeholder="Stat Name" maxlength="20" style="flex:1;">
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" id="new-stat-desc" placeholder="Description (optional)" maxlength="60">
+            </div>
+            <button class="btn-submit" style="width:100%;" onclick="addStat()">Add Stat</button>
+            <div class="modal-actions">
+                <button class="btn-cancel" onclick="closeModals()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Custom Trophy Modal -->
+    <div id="modal-add-achievement" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">Claim Trophy</div>
+            <div class="form-group">
+                <label>Trophy Icon (Emoji)</label>
+                <input type="text" id="trophy-icon" value="🏆" maxlength="2" style="text-align:center;">
+            </div>
+            <div class="form-group">
+                <label>Trophy Name</label>
+                <input type="text" id="trophy-name" placeholder="e.g. Ran a Marathon" maxlength="40">
+            </div>
+            <div class="form-group">
+                <label>Description (Optional)</label>
+                <input type="text" id="trophy-desc" placeholder="What did you do?" maxlength="80">
+            </div>
+            <div class="modal-actions">
+                <button class="btn-cancel" onclick="closeModals()">Cancel</button>
+                <button class="btn-submit" onclick="addCustomAchievement()">Claim Trophy</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Habit Modal -->
+    <div id="modal-habit" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">Build Habit Shrine</div>
+            <div class="form-group">
+                <label>Habit Name</label>
+                <input type="text" id="habit-name" placeholder="e.g. Read 20 pages">
+            </div>
+            <div class="form-group">
+                <label>Theme (Color)</label>
+                <select id="habit-color">
+                    <option value="#3b82f6">Water (Blue)</option>
+                    <option value="#10b981">Nature (Green)</option>
+                    <option value="#ef4444">Fire (Red)</option>
+                    <option value="#8b5cf6">Magic (Purple)</option>
+                    <option value="#fbbf24">Light (Gold)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Stat Category (Hero XP)</label>
+                <select id="habit-stat"></select>
+            </div>
+            <div class="form-group">
+                <label>Difficulty (XP Multiplier)</label>
+                <select id="habit-diff">
+                    <option value="1">Easy (1x XP)</option>
+                    <option value="2">Medium (2x XP)</option>
+                    <option value="3">Hard (3x XP)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Visual Style</label>
+                <div class="radio-group">
+                    <input type="radio" name="habit-visual" id="vis-img" value="image" checked="" onchange="toggleHabitVisual('add')">
+                    <label for="vis-img">Image</label>
+                    <input type="radio" name="habit-visual" id="vis-emo" value="emoji" onchange="toggleHabitVisual('add')">
+                    <label for="vis-emo">Emoji</label>
+                </div>
+                
+                <div id="wrap-habit-image" class="file-upload-wrapper">
+                    <div class="file-upload-btn" id="upload-txt">📁 Upload Image</div>
+                    <input type="file" id="habit-image" accept="image/*">
+                </div>
+                <div id="wrap-habit-emoji" style="display:none;">
+                    <input type="text" id="habit-emoji" placeholder="Type an emoji (e.g. 📖)" maxlength="2" style="text-align:center; font-size:24px;">
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-cancel" onclick="closeModals()">Cancel</button>
+                <button class="btn-submit" onclick="saveHabit()">Construct</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Habit Modal -->
+    <div id="modal-edit-habit" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">Edit Habit Shrine</div>
+            <div class="form-group">
+                <label>Habit Name</label>
+                <input type="text" id="edit-habit-name">
+            </div>
+            <div class="form-group">
+                <label>Theme (Color)</label>
+                <select id="edit-habit-color">
+                    <option value="#3b82f6">Water (Blue)</option>
+                    <option value="#10b981">Nature (Green)</option>
+                    <option value="#ef4444">Fire (Red)</option>
+                    <option value="#8b5cf6">Magic (Purple)</option>
+                    <option value="#fbbf24">Light (Gold)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Stat Category (Hero XP)</label>
+                <select id="edit-habit-stat"></select>
+            </div>
+            <div class="form-group">
+                <label>Difficulty (XP Multiplier)</label>
+                <select id="edit-habit-diff">
+                    <option value="1">Easy (1x XP)</option>
+                    <option value="2">Medium (2x XP)</option>
+                    <option value="3">Hard (3x XP)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Visual Style</label>
+                <div class="radio-group">
+                    <input type="radio" name="edit-habit-visual" id="edit-vis-img" value="image" onchange="toggleHabitVisual('edit')">
+                    <label for="edit-vis-img">Image</label>
+                    <input type="radio" name="edit-habit-visual" id="edit-vis-emo" value="emoji" onchange="toggleHabitVisual('edit')">
+                    <label for="edit-vis-emo">Emoji</label>
+                </div>
+                
+                <div id="edit-wrap-habit-image" class="file-upload-wrapper">
+                    <div class="file-upload-btn" id="edit-upload-txt">📁 Upload Image</div>
+                    <input type="file" id="edit-habit-image" accept="image/*">
+                </div>
+                <div id="edit-wrap-habit-emoji" style="display:none;">
+                    <input type="text" id="edit-habit-emoji" placeholder="Type an emoji (e.g. 📖)" maxlength="2" style="text-align:center; font-size:24px;">
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-cancel" onclick="closeModals()">Cancel</button>
+                <button class="btn-submit" onclick="saveEditHabit()">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Task Modal -->
+    <div id="modal-task" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">Post Bounty</div>
+            <div class="form-group">
+                <label>Mission Title</label>
+                <input type="text" id="task-title" placeholder="e.g. Finish Project Report">
+            </div>
+            <div class="form-group">
+                <label>Stat Category (Hero XP)</label>
+                <select id="task-stat"></select>
+            </div>
+            <div class="form-group">
+                <label>Difficulty (Loot &amp; XP Multiplier)</label>
+                <select id="task-diff">
+                    <option value="1">Easy (Scout)</option>
+                    <option value="2">Medium (Skirmish)</option>
+                    <option value="3">Hard (Siege)</option>
+                </select>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-cancel" onclick="closeModals()">Cancel</button>
+                <button class="btn-submit" onclick="saveTask()">Post</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Building Info Modal -->
+    <div id="modal-building" class="modal-overlay">
+        <div class="modal-content" style="text-align: center;">
+            <div class="modal-header" id="b-modal-title">Town Hall</div>
+            <p id="b-modal-desc" style="color: var(--text-muted); margin-bottom: 20px;">Level 1</p>
+            
+            <div id="b-modal-upgrade-info" style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+                <!-- Updated dynamically -->
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn-cancel" onclick="closeModals()">Close</button>
+                <button class="btn-submit" id="btn-upgrade" onclick="startUpgrade()">Upgrade</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FX Layer -->
+    <div id="fx-layer"></div>
+    <div id="toast-container"></div>
+
+    <script>
+        /* ==========================================================================
+           1. GAME STATE & DATA MODEL
+        ========================================================================== */
+        const STORAGE_KEY = 'lifeVillage_v3';
+        const MAX_BUILDING_LEVEL = 10;
+        
+        let STATE = {
+            version: 3,
+            lastLogin: Date.now(),
+            playerName: "Hero",
+            theme: "forest",
+            resources: { gold: 500, elixir: 500, darkElixir: 0, gems: 10 },
+            builders: { total: 2, active: 0 },
+            buildings: [
+                { id: 'th_1', type: 'town-hall', name: 'Town Hall', level: 1, x: 2000, y: 2000, upgrading: false },
+                { id: 'bboard_1', type: 'bounty-board', name: 'Bounty Board', level: 1, x: 2150, y: 2050, upgrading: false }
+            ],
+            habits: [],
+            tasks: [],
+            journal: [],
+            weeklyChallenge: null,
+            terrain: null,
+            stats: [], 
+            achievements: [],
+            customAchievements: [],
+            totalTasksCompleted: 0
+        };
+
+        const STAT_INFO = {
+            health: { icon: '❤️', name: 'Health', desc: 'Body is your fortress' },
+            wealth: { icon: '💰', name: 'Wealth', desc: 'Gold flows to the disciplined' },
+            career: { icon: '⚔️', name: 'Career', desc: 'Your blade sharpens with every battle' },
+            skill: { icon: '📚', name: 'Skill', desc: 'Knowledge is the mightiest weapon' },
+            relationships: { icon: '🤝', name: 'Relationships', desc: 'No hero survives alone' },
+            discipline: { icon: '🛡️', name: 'Discipline', desc: 'Consistency builds empires' },
+            mindset: { icon: '🧠', name: 'Mindset', desc: 'Control your mind or it controls you' },
+            energy: { icon: '⚡', name: 'Energy', desc: 'Rest is a weapon' },
+            purpose: { icon: '🎯', name: 'Purpose', desc: 'Know your why' },
+            fun: { icon: '🎮', name: 'Fun', desc: 'Recovery is part of the game' }
+        };
+
+        const ACHIEVEMENTS = [
+            { id: 'first_habit', name: 'First Shrine Built', icon: '🏗️' },
+            { id: 'streak_7', name: 'Week Warrior', icon: '🔥' },
+            { id: 'streak_30', name: 'Iron Discipline', icon: '🛡️' },
+            { id: 'first_task', name: 'First Blood', icon: '🩸' },
+            { id: 'tasks_10', name: 'Veteran Soldier', icon: '⚔️' },
+            { id: 'level_5_any', name: 'Rising Champion', icon: '⭐' },
+            { id: 'all_stats_3', name: 'Balanced Warrior', icon: '⚖️' },
+            { id: 'hero_10', name: 'Legend of the Realm', icon: '👑' }
+        ];
+
+        const COST_MULT = 1.8;
+        const TIME_BASE = 60; 
+        const REWARD_BASE = 50; 
+
+        let isCompletedTasksVisible = false;
+
+        function generateId() { return Math.random().toString(36).substr(2, 9); }
+        function formatTime(sec) {
+            if (sec < 60) return sec + 's';
+            if (sec < 3600) return Math.floor(sec/60) + 'm ' + (sec%60) + 's';
+            if (sec < 86400) return Math.floor(sec/3600) + 'h ' + Math.floor((sec%3600)/60) + 'm';
+            return Math.floor(sec/86400) + 'd ' + Math.floor((sec%86400)/3600) + 'h';
+        }
+        function getISOWeek() {
+            const d = new Date();
+            d.setHours(0,0,0,0);
+            d.setDate(d.getDate() + 4 - (d.getDay()||7));
+            const yearStart = new Date(d.getFullYear(),0,1);
+            const weekNo = Math.ceil(( ( (d - yearStart) / 86400000) + 1)/7);
+            return `${d.getFullYear()}-W${weekNo.toString().padStart(2, '0')}`;
+        }
+
+        function saveState() {
+            STATE.lastLogin = Date.now();
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(STATE));
+            updateHUD();
+        }
+
+        function loadState() {
+            if (window.INJECTED_STATE) {
+                STATE = window.INJECTED_STATE;
+                window.INJECTED_STATE = null; 
+            } else {
+                const saved = localStorage.getItem(STORAGE_KEY);
+                if (saved) {
+                    try {
+                        const parsed = JSON.parse(saved);
+                        STATE = { ...STATE, ...parsed }; 
+                    } catch(e) { console.error("Save corrupted"); }
+                }
+            }
+
+            // Migrations / Backwards Compat
+            if (!STATE.buildings.find(b => b.type === 'bounty-board')) {
+                STATE.buildings.push({ id: 'bboard_1', type: 'bounty-board', name: 'Bounty Board', level: 1, x: 2150, y: 2050, upgrading: false });
+            }
+            if (typeof STATE.totalTasksCompleted === 'undefined') STATE.totalTasksCompleted = 0;
+            if (typeof STATE.resources.darkElixir === 'undefined') STATE.resources.darkElixir = 0;
+            if (!STATE.playerName) STATE.playerName = "Hero";
+            if (!STATE.theme) STATE.theme = "forest";
+            if (!STATE.customAchievements) STATE.customAchievements = [];
+            if (!STATE.journal) STATE.journal = [];
+            if (typeof STATE.weeklyChallenge === 'undefined') STATE.weeklyChallenge = null;
+            
+            // Migrate Stats from Object to Array if necessary
+            if (!Array.isArray(STATE.stats)) {
+                let newStats = [];
+                const keys = Object.keys(STATE.stats || {});
+                if (keys.length > 0) {
+                    for (let k of keys) {
+                        newStats.push({
+                            id: 'stat_' + k,
+                            name: STAT_INFO[k]?.name || k,
+                            icon: STAT_INFO[k]?.icon || '⭐',
+                            desc: STAT_INFO[k]?.desc || '',
+                            xp: STATE.stats[k].xp || 0,
+                            level: STATE.stats[k].level || 1
+                        });
+                    }
+                }
+                STATE.stats = newStats;
+            }
+
+            // Default Stats
+            if (STATE.stats.length === 0) {
+                for (let k in STAT_INFO) {
+                    STATE.stats.push({ id: 'stat_'+k, name: STAT_INFO[k].name, icon: STAT_INFO[k].icon, desc: STAT_INFO[k].desc, xp: 0, level: 1 });
+                }
+            }
+
+            document.getElementById('setting-player-name').value = STATE.playerName;
+            document.getElementById('setting-theme').value = STATE.theme;
+            applyTheme();
+
+            saveState();
+        }
+
+        function updateProfile() {
+            STATE.playerName = document.getElementById('setting-player-name').value || "Hero";
+            STATE.theme = document.getElementById('setting-theme').value;
+            applyTheme();
+            saveState();
+            if (currentTab === 'stats') renderStats();
+        }
+
+        function applyTheme() {
+            document.documentElement.setAttribute('data-theme', STATE.theme);
+        }
+
+        function initWeeklyChallenge() {
+            const currentWeek = getISOWeek();
+            if (!STATE.weeklyChallenge || STATE.weeklyChallenge.weekId !== currentWeek) {
+                const types = ['habits', 'tasks', 'journal'];
+                const type = types[Math.floor(Math.random() * types.length)];
+                let goal = 3;
+                if (type === 'habits') goal = Math.floor(Math.random() * 4) + 5;
+                if (type === 'tasks') goal = Math.floor(Math.random() * 3) + 3;
+                STATE.weeklyChallenge = { weekId: currentWeek, type: type, goal: goal, progress: 0, claimed: false };
+                saveState();
+            }
+        }
+
+        function incrementWeeklyChallenge(type) {
+            if (STATE.weeklyChallenge && STATE.weeklyChallenge.type === type && !STATE.weeklyChallenge.claimed) {
+                STATE.weeklyChallenge.progress++;
+                if (STATE.weeklyChallenge.progress >= STATE.weeklyChallenge.goal && STATE.weeklyChallenge.progress - 1 < STATE.weeklyChallenge.goal) {
+                    showToast("⚔️ Challenge complete! Claim your reward in Habits tab.");
+                }
+                saveState();
+                if (currentTab === 'habits') renderHabits();
+            }
+        }
+
+        function claimWeeklyChallenge() {
+            if (STATE.weeklyChallenge && STATE.weeklyChallenge.progress >= STATE.weeklyChallenge.goal && !STATE.weeklyChallenge.claimed) {
+                STATE.weeklyChallenge.claimed = true;
+                earn(5, 'gems');
+                showToast("⚔️ Weekly Challenge complete! +5 Gems!");
+                saveState();
+                renderHabits();
+            }
+        }
+
+        function checkPassiveIncome() {
+            if (!STATE.lastLogin) return;
+            const lastDate = new Date(STATE.lastLogin).toISOString().split('T')[0];
+            const todayDate = new Date().toISOString().split('T')[0];
+            if (lastDate !== todayDate) {
+                let totalGold = 0;
+                STATE.habits.forEach(h => {
+                    if (h.streak >= 3) totalGold += Math.floor(h.streak * 2);
+                });
+                if (totalGold > 0) {
+                    earn(totalGold, 'gold');
+                    showToast(`🌅 New day! Your streaks earned +${totalGold} Gold while you were away.`);
+                }
+            }
+        }
+
+        /* ==========================================================================
+           2. CORE SYSTEMS & PROGRESSION
+        ========================================================================== */
+        function calculateUpgradeCost(type, currentLevel) {
+            let baseG = type === 'town-hall' ? 1000 : 200;
+            let baseE = type === 'town-hall' ? 500 : 100;
+            let costG = Math.floor(baseG * Math.pow(COST_MULT, currentLevel));
+            let costE = Math.floor(baseE * Math.pow(COST_MULT, currentLevel));
+            let time = Math.floor(TIME_BASE * 60 * currentLevel * (type === 'town-hall' ? 3 : 1));
+            return { costG, costE, time };
+        }
+
+        function canAfford(amountG, amountE) { return STATE.resources.gold >= amountG && STATE.resources.elixir >= amountE; }
+        function spend(amountG, amountE) {
+            if (canAfford(amountG, amountE)) {
+                STATE.resources.gold -= amountG; STATE.resources.elixir -= amountE;
+                saveState(); return true;
+            }
+            return false;
+        }
+        function earn(amount, currency = 'gold') { 
+            STATE.resources[currency] += amount; 
+            if (STATE.resources[currency] < 0) STATE.resources[currency] = 0;
+            saveState(); 
+        }
+
+        // Achievements Logic
+        function unlockAchievement(id) {
+            if (!STATE.achievements.includes(id)) {
+                STATE.achievements.push(id);
+                earn(1, 'gems');
+                const ach = ACHIEVEMENTS.find(a => a.id === id);
+                if(ach) showToast(`🏆 Achievement Unlocked: ${ach.name}! (+1 Gem)`);
+                saveState();
+            }
+        }
+        
+        function checkAchievements() {
+            if (STATE.stats.some(s => s.level >= 5)) unlockAchievement('level_5_any');
+            if (STATE.stats.length > 0 && STATE.stats.every(s => s.level >= 3)) unlockAchievement('all_stats_3');
+            let avgLevel = Math.floor(STATE.stats.reduce((sum, s) => sum + s.level, 0) / (STATE.stats.length || 1));
+            if (avgLevel >= 10) unlockAchievement('hero_10');
+        }
+
+        // XP Logic
+        function addXP(statId, amount) {
+            const stat = STATE.stats.find(s => s.id === statId);
+            if (!stat) return;
+            stat.xp += amount;
+            
+            let leveledUp = false;
+            while (stat.xp >= stat.level * 50) {
+                stat.xp -= (stat.level * 50);
+                stat.level++;
+                leveledUp = true;
+                earn(50, 'gold');
+                earn(25, 'elixir');
+            }
+            
+            if (leveledUp) {
+                setTimeout(() => showToast(`⬆️ ${stat.name} leveled up to Lv.${stat.level}!`), 500);
+                checkAchievements();
+            }
+            saveState();
+            if (currentTab === 'stats') renderStats();
+        }
+
+        // Streak & Penalty Logic
+        function checkStreaks() {
+            const today = new Date(); today.setHours(0,0,0,0);
+            const yesterday = new Date(today); yesterday.setDate(yesterday.getDate() - 1);
+            const todayStr = today.toISOString().split('T')[0];
+            const yesterdayStr = yesterday.toISOString().split('T')[0];
+
+            const missedHabits = STATE.habits.filter(h =>
+                h.streak > 0 && !h.history[todayStr] && !h.history[yesterdayStr] && !h.frozen
+            );
+
+            if (missedHabits.length === 0) return;
+
+            const names = missedHabits.map(h => `"${h.name}"`).join(', ');
+            const gemCost = missedHabits.length * 5;
+
+            openConfirmModal(
+                "Habits Missed!",
+                `You missed ${names}.\n\n⚠️ Accepting penalty will reset all ${missedHabits.length} streak(s) and cost you 20% of Gold and Elixir.\n\nPay ${gemCost} Gems to protect all streaks?`,
+                () => {
+                    if (STATE.resources.gems >= gemCost) {
+                        earn(-gemCost, 'gems');
+                        missedHabits.forEach(h => h.frozen = true);
+                        showToast(`${missedHabits.length} streak(s) protected! -${gemCost} 💎`);
+                    } else {
+                        missedHabits.forEach(h => { h.streak = 0; });
+                        STATE.resources.gold = Math.floor(STATE.resources.gold * 0.8);
+                        STATE.resources.elixir = Math.floor(STATE.resources.elixir * 0.8);
+                        showToast(`Streaks broken. Lost 20% of resources.`);
+                    }
+                    saveState(); renderHabits();
+                },
+                `Use ${gemCost} Gems 💎`,
+                () => {
+                    missedHabits.forEach(h => { h.streak = 0; });
+                    STATE.resources.gold = Math.floor(STATE.resources.gold * 0.8);
+                    STATE.resources.elixir = Math.floor(STATE.resources.elixir * 0.8);
+                    saveState(); renderHabits();
+                    showToast(`Streaks broken. Lost 20% of resources.`);
+                }
+            );
+        }
+
+        /* ==========================================================================
+           3. UI CONTROLLERS & RENDERING
+        ========================================================================== */
+        let currentTab = 'village';
+        function switchTab(tabId, el) {
+            document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+            document.getElementById('view-' + tabId).classList.add('active');
+            if (el) {
+                document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+                el.classList.add('active');
+            }
+            currentTab = tabId;
+            renderCurrentView();
+        }
+
+        function renderCurrentView() {
+            updateHUD();
+            if (currentTab === 'village') renderVillage();
+            if (currentTab === 'habits') renderHabits();
+            if (currentTab === 'war') renderTasks();
+            if (currentTab === 'journal') renderJournal();
+            if (currentTab === 'stats') renderStats();
+        }
+
+        function updateHUD() {
+            document.getElementById('res-gold').innerText = STATE.resources.gold.toLocaleString();
+            document.getElementById('res-elixir').innerText = STATE.resources.elixir.toLocaleString();
+            document.getElementById('res-gems').innerText = STATE.resources.gems.toLocaleString();
+            document.getElementById('res-builders').innerText = `${STATE.builders.total - STATE.builders.active}/${STATE.builders.total}`;
+            
+            const darkPill = document.getElementById('res-pill-dark-elixir');
+            if (STATE.resources.darkElixir > 0) {
+                darkPill.style.display = 'flex';
+                document.getElementById('res-dark-elixir').innerText = STATE.resources.darkElixir.toLocaleString();
+            } else darkPill.style.display = 'none';
+
+            const hasActiveUpgrade = STATE.buildings.some(b => b.upgrading);
+            const villageNavDot = document.getElementById('village-nav-dot');
+            if (villageNavDot) villageNavDot.style.display = hasActiveUpgrade ? 'block' : 'none';
+        }
+
+        // --- Village Map ---
+        let mapDragged = false;
+        let isEditMode = false;
+        let draggedBuilding = null; 
+        
+        // Attach document level drag listeners ONCE
+        document.addEventListener('pointermove', (e) => {
+            if(!draggedBuilding) return;
+            const map = document.getElementById('village-map');
+            const rect = map.getBoundingClientRect();
+            const nx = e.clientX - rect.left;
+            const ny = e.clientY - rect.top;
+            draggedBuilding.el.style.left = nx + 'px';
+            draggedBuilding.el.style.top = ny + 'px';
+            draggedBuilding.b.x = nx;
+            draggedBuilding.b.y = ny;
+        });
+        document.addEventListener('pointerup', () => {
+            if(draggedBuilding) { draggedBuilding = null; saveState(); }
+        });
+
+        function centerTownHall() {
+            const th = STATE.buildings.find(b => b.type === 'town-hall');
+            if(th) {
+                const scrollArea = document.getElementById('village-scroll');
+                const targetLeft = th.x - (window.innerWidth / 2);
+                const targetTop = th.y - (window.innerHeight / 2);
+                scrollArea.scrollTo({ left: targetLeft, top: targetTop, behavior: 'smooth' });
+            }
+        }
+
+        function initVillageMap() {
+            const scrollArea = document.getElementById('village-scroll');
+            const th = STATE.buildings.find(b => b.type === 'town-hall') || {x: 2000, y: 2000};
+            scrollArea.scrollLeft = th.x - (window.innerWidth / 2);
+            scrollArea.scrollTop = th.y - (window.innerHeight / 2);
+
+            let isDown = false;
+            let startX, startY, scrollLeft, scrollTop;
+
+            scrollArea.addEventListener('pointerdown', (e) => {
+                if(e.target.closest('.building') && isEditMode) return; 
+                isDown = true; mapDragged = false;
+                startX = e.pageX - scrollArea.offsetLeft;
+                startY = e.pageY - scrollArea.offsetTop;
+                scrollLeft = scrollArea.scrollLeft;
+                scrollTop = scrollArea.scrollTop;
+            });
+
+            scrollArea.addEventListener('pointerleave', () => isDown = false);
+            scrollArea.addEventListener('pointerup', () => isDown = false);
+            scrollArea.addEventListener('pointermove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const walkX = ((e.pageX - scrollArea.offsetLeft) - startX);
+                const walkY = ((e.pageY - scrollArea.offsetTop) - startY);
+                if (Math.abs(walkX) > 5 || Math.abs(walkY) > 5) mapDragged = true;
+                scrollArea.scrollLeft = scrollLeft - walkX;
+                scrollArea.scrollTop = scrollTop - walkY;
+            });
+            generateTerrainDecor();
+        }
+
+        function toggleEditMode() {
+            isEditMode = !isEditMode;
+            document.getElementById('btn-edit-layout').innerText = isEditMode ? "💾 Save Layout" : "🏗️ Edit Layout";
+            const map = document.getElementById('village-map');
+            if (isEditMode) map.classList.add('edit-mode');
+            else map.classList.remove('edit-mode');
+            saveState();
+        }
+
+        function generateTerrainDecor() {
+            if (!STATE.terrain || STATE.terrain.length === 0) {
+                STATE.terrain = [];
+                let seed = 12345;
+                function random() { let x = Math.sin(seed++) * 10000; return x - Math.floor(x); }
+                for(let i=0; i<150; i++) {
+                    STATE.terrain.push({
+                        type: random() > 0.5 ? '🌲' : (random() > 0.5 ? '🌳' : '🪨'),
+                        x: random() * 4000,
+                        y: random() * 4000,
+                        s: random() * 10 + 10
+                    });
+                }
+                saveState();
+            }
+
+            const map = document.getElementById('village-map');
+            map.querySelectorAll('.prop').forEach(e => e.remove());
+            STATE.terrain.forEach(t => {
+                let p = document.createElement('div');
+                p.className = 'prop'; p.style.left = t.x + 'px'; p.style.top = t.y + 'px'; p.style.fontSize = t.s + 'px'; p.innerText = t.type;
+                map.appendChild(p);
+            });
+        }
+
+        function renderVillage() {
+            const map = document.getElementById('village-map');
+            map.querySelectorAll('.building').forEach(e => e.remove());
+
+            STATE.buildings.forEach(b => {
+                const el = document.createElement('div');
+                el.className = `building ${b.type}`;
+                el.dataset.id = b.id; 
+                el.style.left = b.x + 'px';
+                el.style.top = b.y + 'px';
+                
+                let bgStyle = '';
+                if (b.image) bgStyle = `background: url(${b.image}) center/cover no-repeat; border-color: ${b.color || '#8b5cf6'};`;
+                else if (b.color) bgStyle = `background: linear-gradient(135deg, ${b.color}, #111827); border-color: ${b.color};`;
+                
+                let emojiContent = b.emoji ? b.emoji : (b.type==='habit-shrine' && !b.image ? '🔮' : '');
+                
+                let levelHtml = b.level >= MAX_BUILDING_LEVEL ? `<div class="bldg-level" style="background: linear-gradient(135deg, var(--gold), #f59e0b);">MAX</div>` : `<div class="bldg-level">Lv.${b.level}</div>`;
+
+                let innerHTML = `
+                    <div class="bldg-shadow"></div>
+                    <div class="bldg-name">${b.name}</div>
+                    <div class="bldg-sprite" style="${bgStyle}">${b.image ? '' : emojiContent}</div>
+                    ${levelHtml}
+                `;
+
+                if (b.upgrading) {
+                    const pct = Math.min(100, ((Date.now() - b.upgradeStartTime) / b.upgradeTotalTime) * 100);
+                    innerHTML += `
+                        <div class="upgrade-bar-container">
+                            <div class="upgrade-bar-fill" style="width: ${pct}%"></div>
+                        </div>
+                    `;
+                }
+
+                el.innerHTML = innerHTML;
+                
+                el.addEventListener('pointerdown', (e) => {
+                    if(isEditMode) { draggedBuilding = { el, b }; e.stopPropagation(); }
+                });
+                el.addEventListener('pointerup', (e) => {
+                    if (!mapDragged && !isEditMode) {
+                        if (b.type === 'bounty-board') switchTab('war', document.querySelectorAll('.nav-item')[2]);
+                        else openBuildingModal(b);
+                    }
+                });
+                
+                map.appendChild(el);
+            });
+        }
+
+        // --- Habits View ---
+        function renderHabits() {
+            const container = document.getElementById('habits-container');
+            const challengeContainer = document.getElementById('challenge-container');
+            container.innerHTML = '';
+            challengeContainer.innerHTML = '';
+
+            // Weekly Challenge Banner
+            if (STATE.weeklyChallenge) {
+                const wc = STATE.weeklyChallenge;
+                let desc = "";
+                if (wc.type === 'habits') desc = `Complete ${wc.goal} habit check-ins this week`;
+                if (wc.type === 'tasks') desc = `Complete ${wc.goal} bounties this week`;
+                if (wc.type === 'journal') desc = `Write ${wc.goal} journal entries this week`;
+                
+                const pct = Math.min(100, (wc.progress / wc.goal) * 100);
+                let rewardHtml = '';
+                if (wc.claimed) {
+                    rewardHtml = `<div style="color:var(--success); font-weight:bold; font-size:12px; margin-top:10px;">✅ Reward Claimed!</div>`;
+                } else if (wc.progress >= wc.goal) {
+                    rewardHtml = `<button class="btn-primary" style="margin-top:10px; font-size:12px; padding:6px 12px;" onclick="claimWeeklyChallenge()">🎁 Claim Reward (+5 Gems)</button>`;
+                }
+
+                challengeContainer.innerHTML = `
+                    <div class="challenge-banner">
+                        <h3>⚔️ Weekly Challenge</h3>
+                        <p>${desc}</p>
+                        <div class="challenge-progress-bg">
+                            <div class="challenge-progress-fill" style="width:${pct}%"></div>
+                        </div>
+                        <div class="challenge-progress-text">${wc.progress} / ${wc.goal}</div>
+                        ${rewardHtml}
+                    </div>
+                `;
+            }
+
+            if (STATE.habits.length === 0) {
+                container.innerHTML = `<div style="text-align:center; color: var(--text-muted); padding: 40px;">No habits formed yet. Build a shrine to begin.</div>`;
+                return;
+            }
+
+            const today = new Date().toISOString().split('T')[0];
+
+            STATE.habits.forEach(h => {
+                const card = document.createElement('div');
+                card.className = 'habit-card';
+                
+                let completedToday = h.history[today] > 0;
+                let imgStyle = h.image ? `background-image: url('${h.image}');` : `background: ${h.color};`;
+                let iconContent = h.image ? '' : (h.emoji || '🔮');
+                
+                const statObj = STATE.stats.find(s => s.id === h.stat);
+                let statIcon = statObj ? statObj.icon : '';
+                
+                let allTimeCompletions = Object.values(h.history).reduce((sum, v) => sum + (v>0?1:0), 0);
+
+                let html = `
+                    <div class="habit-card-header">
+                        <div class="habit-title-area">
+                            <div class="habit-icon" style="${imgStyle}">${iconContent}</div>
+                            <div>
+                                <div class="habit-name">${h.name} <span class="stat-badge">${statIcon}</span></div>
+                                <div class="habit-streak">🔥 ${h.streak} Day Streak &nbsp;|&nbsp; 📅 ${allTimeCompletions} Total</div>
+                            </div>
+                        </div>
+                        <div class="habit-actions">
+                            <button class="btn-icon-edit" onclick="openEditHabitModal('${h.id}')" title="Edit Habit">✏️</button>
+                            <button class="btn-icon-danger" onclick="promptDeleteHabit('${h.id}')" title="Delete Habit">🗑️</button>
+                            <button class="btn-complete" ${completedToday ? 'disabled' : ''} onclick="completeHabit('${h.id}')">
+                                ${completedToday ? '✓' : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>'}
+                            </button>
+                        </div>
+                    </div>
+                    <div class="habit-grid-container">
+                `;
+
+                for (let col = 0; col < 4; col++) {
+                    html += `<div class="grid-col">`;
+                    for (let row = 0; row < 7; row++) {
+                        let d = new Date(); d.setDate(d.getDate() - (27 - (col * 7 + row)));
+                        let dateStr = d.toISOString().split('T')[0];
+                        let count = h.history[dateStr] || 0;
+                        let opacity = count > 0 ? Math.min(1, 0.4 + (count * 0.2)) : 0.05;
+                        let bg = count > 0 ? h.color : '#ffffff';
+                        html += `<div class="grid-cell" style="background: ${bg}; opacity: ${opacity};" title="${dateStr}"></div>`;
+                    }
+                    html += `</div>`;
+                }
+                html += `</div>`;
+                card.innerHTML = html;
+                container.appendChild(card);
+            });
+        }
+
+        // --- Tasks View ---
+        function renderTasks() {
+            const container = document.getElementById('tasks-container');
+            container.innerHTML = '';
+            const activeTasks = STATE.tasks.filter(t => t.status === 'active');
+            
+            if (activeTasks.length === 0) {
+                container.innerHTML = `<div style="text-align:center; color: var(--text-muted); padding: 40px;">The realm is peaceful. No active bounties.</div>`;
+            } else {
+                activeTasks.forEach(t => {
+                    const card = document.createElement('div');
+                    card.className = 'bounty-card';
+                    let diffMulti = t.diff || 1;
+                    let lootG = diffMulti * 100;
+                    let lootE = diffMulti * 50;
+                    const statObj = STATE.stats.find(s => s.id === t.stat);
+                    let statIcon = statObj ? statObj.icon : '';
+
+                    card.innerHTML = `
+                        <div class="bounty-info">
+                            <h3>${t.title} <span style="font-size: 12px; font-weight:normal; margin-left:6px;">${statIcon}</span></h3>
+                            <p>Difficulty: ${t.diff == 1 ? 'Scout' : t.diff == 2 ? 'Skirmish' : 'Siege'}</p>
+                            <div class="bounty-loot">
+                                <span class="loot-tag">🟡 ${lootG} Gold</span>
+                                <span class="loot-tag" style="color:var(--elixir)">🟣 ${lootE} Elixir</span>
+                                ${diffMulti === 3 ? '<span class="loot-tag" style="color:#6366f1">🔮 5 Dark</span>' : ''}
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 8px;">
+                            <button class="btn-icon-danger" style="height: auto; padding: 0 12px;" onclick="promptDeleteTask('${t.id}')">🗑️</button>
+                            <button class="btn-attack" onclick="promptCompleteTask('${t.id}')">Execute</button>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            }
+
+            // Completed Tasks Archive
+            const completedContainer = document.getElementById('completed-tasks-container');
+            const completedTasks = STATE.tasks.filter(t => t.status === 'completed');
+            document.getElementById('btn-toggle-completed').innerText = `📜 Show/Hide Completed (${completedTasks.length})`;
+            
+            completedContainer.style.display = isCompletedTasksVisible ? 'block' : 'none';
+            completedContainer.innerHTML = '';
+
+            if (completedTasks.length > 0) {
+                const recent = completedTasks.slice(-10).reverse();
+                recent.forEach(t => {
+                    const card = document.createElement('div');
+                    card.className = 'bounty-card completed';
+                    let diffMulti = t.diff || 1;
+                    let lootG = diffMulti * 100; let lootE = diffMulti * 50;
+                    card.innerHTML = `
+                        <div class="bounty-info" style="opacity:0.8;">
+                            <h3>${t.title} <span style="color:var(--success); margin-left:6px;">✓</span></h3>
+                            <div class="bounty-loot" style="filter:grayscale(0.5);">
+                                <span class="loot-tag">🟡 ${lootG}</span>
+                                <span class="loot-tag" style="color:var(--elixir)">🟣 ${lootE}</span>
+                            </div>
+                        </div>
+                    `;
+                    completedContainer.appendChild(card);
+                });
+            }
+        }
+
+        function toggleCompletedTasks() {
+            isCompletedTasksVisible = !isCompletedTasksVisible;
+            document.getElementById('completed-tasks-container').style.display = isCompletedTasksVisible ? 'block' : 'none';
+        }
+
+        function clearCompletedTasks() {
+            if (confirm("Clear history of completed bounties?")) {
+                STATE.tasks = STATE.tasks.filter(t => t.status !== 'completed');
+                saveState();
+                renderTasks();
+            }
+        }
+
+        // --- Journal View ---
+        function renderJournal() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('journal-date-display').innerText = new Date().toDateString();
+            
+            const existingEntry = STATE.journal.find(j => j.date === today);
+            
+            const iConq = document.getElementById('journal-conquer');
+            const iChal = document.getElementById('journal-challenge');
+            const iEner = document.getElementById('journal-energy');
+            const iImpr = document.getElementById('journal-improve');
+            const iGrat = document.getElementById('journal-grateful');
+            const btnSubmit = document.getElementById('btn-submit-journal');
+            const msgLogged = document.getElementById('journal-already-logged');
+
+            if (existingEntry) {
+                iConq.value = existingEntry.responses.conquer || '';
+                iChal.value = existingEntry.responses.challenge || '';
+                iEner.value = existingEntry.responses.energy || 3;
+                iImpr.value = existingEntry.responses.improve || '';
+                iGrat.value = existingEntry.responses.grateful || '';
+                
+                document.getElementById('journal-energy-val').innerText = iEner.value;
+                
+                [iConq, iChal, iEner, iImpr, iGrat].forEach(el => el.disabled = true);
+                btnSubmit.style.display = 'none';
+                msgLogged.style.display = 'block';
+            } else {
+                iConq.value = ''; iChal.value = ''; iEner.value = 3; iImpr.value = ''; iGrat.value = '';
+                document.getElementById('journal-energy-val').innerText = '3';
+                
+                [iConq, iChal, iEner, iImpr, iGrat].forEach(el => el.disabled = false);
+                btnSubmit.style.display = 'block';
+                msgLogged.style.display = 'none';
+            }
+
+            const histContainer = document.getElementById('journal-history-container');
+            histContainer.innerHTML = '';
+            
+            const past = STATE.journal.filter(j => j.date !== today).slice(-7).reverse();
+            if (past.length === 0) {
+                histContainer.innerHTML = `<p style="color:var(--text-muted); font-size:12px; text-align:center;">No past entries.</p>`;
+            } else {
+                past.forEach(j => {
+                    const card = document.createElement('div');
+                    card.className = 'journal-entry-card';
+                    let preview = j.responses.conquer || 'Journal Entry';
+                    if (preview.length > 40) preview = preview.substring(0, 40) + '...';
+                    
+                    card.innerHTML = `
+                        <div style="font-weight:bold; font-size:14px;">${j.date} <span style="font-weight:normal; color:var(--text-muted); font-size:12px; margin-left:10px;">${preview}</span></div>
+                        <div class="journal-entry-content">
+                            <p><strong style="color:var(--gold);">Conquered:</strong> ${j.responses.conquer || '-'}</p>
+                            <p><strong style="color:var(--gold);">Challenge:</strong> ${j.responses.challenge || '-'}</p>
+                            <p><strong style="color:var(--gold);">Energy:</strong> ${j.responses.energy}/5</p>
+                            <p><strong style="color:var(--gold);">Improve:</strong> ${j.responses.improve || '-'}</p>
+                            <p><strong style="color:var(--gold);">Grateful:</strong> ${j.responses.grateful || '-'}</p>
+                        </div>
+                    `;
+                    card.onclick = () => card.classList.toggle('expanded');
+                    histContainer.appendChild(card);
+                });
+            }
+        }
+
+        function submitJournal() {
+            const today = new Date().toISOString().split('T')[0];
+            if (STATE.journal.find(j => j.date === today)) return;
+
+            const entry = {
+                id: 'j_' + generateId(),
+                date: today,
+                createdAt: Date.now(),
+                responses: {
+                    conquer: document.getElementById('journal-conquer').value,
+                    challenge: document.getElementById('journal-challenge').value,
+                    energy: document.getElementById('journal-energy').value,
+                    improve: document.getElementById('journal-improve').value,
+                    grateful: document.getElementById('journal-grateful').value
+                }
+            };
+            STATE.journal.push(entry);
+            earn(25, 'gold'); earn(10, 'elixir');
+            incrementWeeklyChallenge('journal');
+            saveState();
+            renderJournal();
+            showToast("📓 Journal entry saved! +25 Gold");
+        }
+
+        // --- Hero Stats View ---
+        function renderStats() {
+            const container = document.getElementById('stats-container');
+            
+            let totalLevel = 0;
+            let statsHtml = '';
+            
+            STATE.stats.forEach(s => {
+                totalLevel += s.level;
+                const nextXp = s.level * 50;
+                const pct = Math.min(100, (s.xp / nextXp) * 100);
+
+                statsHtml += `
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-name">${s.icon} ${s.name}</span>
+                            <span class="stat-lvl">Lv.${s.level}</span>
+                        </div>
+                        <div class="stat-desc" title="${s.desc}">${s.desc || '-'}</div>
+                        <div class="stat-bar-bg">
+                            <div class="stat-bar-fill" style="width: ${pct}%"></div>
+                            <div class="stat-bar-text">${s.xp} / ${nextXp} XP</div>
+                        </div>
+                    </div>
+                `;
+            });
+            container.innerHTML = statsHtml;
+            
+            const heroLevel = Math.floor(totalLevel / (STATE.stats.length || 1)) || 1;
+            document.getElementById('hero-level-title').innerText = `${STATE.playerName || 'Hero'}'s Village - Hero Level ${heroLevel}`;
+
+            // Render Achievements
+            const achContainer = document.getElementById('achievements-container');
+            let achHtml = '';
+            ACHIEVEMENTS.forEach(a => {
+                const unlocked = STATE.achievements.includes(a.id);
+                achHtml += `
+                    <div class="achievement-badge ${unlocked ? '' : 'locked'}" title="${a.name}">
+                        ${a.icon}
+                        <div class="achievement-name">${a.name}</div>
+                    </div>
+                `;
+            });
+            achContainer.innerHTML = achHtml;
+
+            // Render Custom Trophies
+            const customAchContainer = document.getElementById('custom-achievements-container');
+            let customAchHtml = '';
+            if (STATE.customAchievements.length === 0) {
+                customAchHtml = `<div style="grid-column: 1/-1; text-align:center; color: var(--text-muted); font-size:12px;">No custom trophies yet. Claim your real-life wins!</div>`;
+            } else {
+                STATE.customAchievements.forEach(a => {
+                    customAchHtml += `
+                        <div class="achievement-badge" title="${a.desc || a.name}">
+                            ${a.icon}
+                            <div class="achievement-name">${a.name}</div>
+                            <button onclick="deleteCustomAchievement('${a.id}')" style="position:absolute; top:-5px; right:-5px; background:var(--danger); border:none; border-radius:50%; width:16px; height:16px; color:white; font-size:10px; cursor:pointer;">×</button>
+                        </div>
+                    `;
+                });
+            }
+            customAchContainer.innerHTML = customAchHtml;
+        }
+
+        /* ==========================================================================
+           4. ACTIONS, MODALS & LOGIC
+        ========================================================================== */
+        
+        /* ==========================================================================
+           5. UTILS, FX & IMPORT/EXPORT HTML
+        ========================================================================== */
+        function closeModals() { document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('active')); }
+
+        function playFX(text, color) {
+            const layer = document.getElementById('fx-layer');
+            if (!layer) return;
+            const el = document.createElement('div');
+            el.className = 'floating-text'; el.style.color = color; el.innerText = text;
+            el.style.left = ((window.innerWidth / 2) - 50 + (Math.random() * 40 - 20)) + 'px';
+            el.style.top = ((window.innerHeight / 2) + (Math.random() * 40 - 20)) + 'px';
+            layer.appendChild(el); setTimeout(() => el.remove(), 1500);
+        }
+
+        function createFlash() { 
+            const f = document.createElement('div'); 
+            f.className = 'screen-flash'; 
+            setTimeout(() => f.remove(), 300); 
+            return f; 
+        }
+
+        function showToast(msg) {
+            const container = document.getElementById('toast-container');
+            if (!container) return;
+            const el = document.createElement('div'); el.className = 'toast'; el.innerText = msg;
+            container.appendChild(el);
+            setTimeout(() => { el.style.opacity = 0; setTimeout(() => el.remove(), 300); }, 2500);
+        }
+        
+        function openConfirmModal(title, msg, onConfirm, confirmBtnText = "Yes", onCancel = null) {
+            document.getElementById('confirm-title').innerText = title;
+            document.getElementById('confirm-msg').innerText = msg;
+            const btnYes = document.getElementById('btn-confirm-yes');
+            btnYes.innerText = confirmBtnText;
+            btnYes.onclick = () => { onConfirm(); closeModals(); };
+
+            const btnCancel = document.querySelector('#modal-confirm .btn-cancel');
+            btnCancel.onclick = () => { if(onCancel) onCancel(); closeModals(); }
+            document.getElementById('modal-confirm').classList.add('active');
+        }
+
+        function populateStatSelect(elId) {
+            const el = document.getElementById(elId);
+            if(el) el.innerHTML = STATE.stats.map(s => `<option value="${s.id}">${s.icon} ${s.name}</option>`).join('');
+        }
+
+        // Image Upload handlers
+        let uploadedHabitImage = null;
+        document.getElementById('habit-image').addEventListener('change', function(e) {
+            const file = e.target.files[0]; if(!file) return;
+            document.getElementById('upload-txt').innerText = "✅ Image Selected!";
+            const reader = new FileReader(); reader.onload = (event) => uploadedHabitImage = event.target.result;
+            reader.readAsDataURL(file);
+        });
+        document.getElementById('edit-habit-image').addEventListener('change', function(e) {
+            const file = e.target.files[0]; if(!file) return;
+            document.getElementById('edit-upload-txt').innerText = "✅ Image Selected!";
+            const reader = new FileReader(); reader.onload = (event) => uploadedHabitImage = event.target.result;
+            reader.readAsDataURL(file);
+        });
+
+        function toggleHabitVisual(prefix) {
+            const val = document.querySelector(`input[name="${prefix === 'add' ? 'habit-visual' : 'edit-habit-visual'}"]:checked`).value;
+            const wrapImg = document.getElementById(prefix === 'add' ? 'wrap-habit-image' : 'edit-wrap-habit-image');
+            const wrapEmo = document.getElementById(prefix === 'add' ? 'wrap-habit-emoji' : 'edit-wrap-habit-emoji');
+            if (val === 'image') { wrapImg.style.display = 'inline-block'; wrapEmo.style.display = 'none'; }
+            else { wrapImg.style.display = 'none'; wrapEmo.style.display = 'block'; }
+        }
+
+        function openHabitModal() {
+            uploadedHabitImage = null;
+            document.getElementById('habit-name').value = '';
+            document.getElementById('habit-emoji').value = '';
+            document.getElementById('upload-txt').innerText = "📁 Upload Image";
+            document.getElementById('habit-image').value = '';
+            document.getElementById('vis-img').checked = true;
+            document.getElementById('habit-diff').value = 1;
+            toggleHabitVisual('add');
+            populateStatSelect('habit-stat');
+            document.getElementById('modal-habit').classList.add('active');
+        }
+
+        function saveHabit() {
+            const name = document.getElementById('habit-name').value;
+            const color = document.getElementById('habit-color').value;
+            const stat = document.getElementById('habit-stat').value;
+            const diff = parseInt(document.getElementById('habit-diff').value) || 1;
+            const visualType = document.querySelector('input[name="habit-visual"]:checked').value;
+            const emoji = document.getElementById('habit-emoji').value;
+            
+            if(!name) return showToast("Name required!");
+
+            const newHabit = {
+                id: 'h_' + generateId(),
+                name: name,
+                color: color,
+                stat: stat,
+                diff: diff,
+                image: visualType === 'image' ? uploadedHabitImage : null,
+                emoji: visualType === 'emoji' ? emoji : null,
+                streak: 0,
+                history: {},
+                frozen: false,
+                createdAt: Date.now()
+            };
+            STATE.habits.push(newHabit);
+            
+            let th = STATE.buildings.find(b => b.type === 'town-hall') || {x: 2000, y:2000}; 
+            STATE.buildings.push({
+                id: 'b_' + newHabit.id,
+                type: 'habit-shrine',
+                name: name,
+                color: color,
+                image: newHabit.image,
+                emoji: newHabit.emoji,
+                level: 1,
+                x: th.x + (Math.random()*200 - 100),
+                y: th.y + (Math.random()*200 - 100) + 150,
+                linkedHabit: newHabit.id,
+                upgrading: false
+            });
+
+            unlockAchievement('first_habit');
+            saveState(); closeModals(); renderHabits(); showToast("Shrine Constructed!");
+        }
+
+        // Edit Habit
+        let editingHabitId = null;
+        function openEditHabitModal(id) {
+            const h = STATE.habits.find(x => x.id === id);
+            if (!h) return;
+            editingHabitId = id;
+            uploadedHabitImage = h.image || null;
+            
+            document.getElementById('edit-habit-name').value = h.name;
+            document.getElementById('edit-habit-color').value = h.color;
+            populateStatSelect('edit-habit-stat');
+            document.getElementById('edit-habit-stat').value = h.stat;
+            document.getElementById('edit-habit-diff').value = h.diff || 1;
+            
+            document.getElementById('edit-upload-txt').innerText = h.image ? "✅ Image Selected!" : "📁 Upload Image";
+            document.getElementById('edit-habit-image').value = '';
+            document.getElementById('edit-habit-emoji').value = h.emoji || '';
+            
+            if (h.emoji && !h.image) document.getElementById('edit-vis-emo').checked = true;
+            else document.getElementById('edit-vis-img').checked = true;
+            
+            toggleHabitVisual('edit');
+            document.getElementById('modal-edit-habit').classList.add('active');
+        }
+
+        function saveEditHabit() {
+            const h = STATE.habits.find(x => x.id === editingHabitId);
+            const b = STATE.buildings.find(x => x.linkedHabit === editingHabitId);
+            if (!h || !b) return;
+
+            const visualType = document.querySelector('input[name="edit-habit-visual"]:checked').value;
+            
+            h.name = document.getElementById('edit-habit-name').value || h.name;
+            h.color = document.getElementById('edit-habit-color').value;
+            h.stat = document.getElementById('edit-habit-stat').value;
+            h.diff = parseInt(document.getElementById('edit-habit-diff').value) || 1;
+            
+            if (visualType === 'image') {
+                h.image = uploadedHabitImage; h.emoji = null;
+            } else {
+                h.emoji = document.getElementById('edit-habit-emoji').value; h.image = null;
+            }
+
+            b.name = h.name; b.color = h.color; b.image = h.image; b.emoji = h.emoji;
+
+            saveState(); closeModals(); renderHabits(); 
+            if(currentTab === 'village') renderVillage();
+            showToast("Shrine Updated!");
+        }
+
+        function promptDeleteHabit(id) {
+            const h = STATE.habits.find(x => x.id === id);
+            openConfirmModal("Destroy Shrine?", `Are you sure you want to permanently delete "${h.name}" and its Shrine? This cannot be undone.`, () => deleteHabit(id), "Destroy");
+        }
+
+        function deleteHabit(id) {
+            STATE.habits = STATE.habits.filter(x => x.id !== id);
+            STATE.buildings = STATE.buildings.filter(x => x.linkedHabit !== id);
+            saveState(); renderHabits();
+            if(currentTab === 'village') renderVillage();
+            showToast("Shrine Destroyed.");
+        }
+
+        function showUndoToast(msg, onUndo) {
+            const container = document.getElementById('toast-container');
+            const el = document.createElement('div');
+            el.className = 'toast';
+            el.style.cursor = 'pointer';
+            el.style.display = 'flex';
+            el.style.justifyContent = 'space-between';
+            el.style.alignItems = 'center';
+            el.style.gap = '12px';
+            el.innerHTML = `<span>${msg}</span><span style="font-size:11px; opacity:0.8; text-decoration:underline;">UNDO</span>`;
+            let undone = false;
+            el.addEventListener('click', () => {
+                if (!undone) { undone = true; onUndo(); el.remove(); }
+            });
+            container.appendChild(el);
+            setTimeout(() => { el.style.opacity = 0; setTimeout(() => el.remove(), 300); }, 4000);
+        }
+
+        function completeHabit(id) {
+            const h = STATE.habits.find(x => x.id === id);
+            const b = STATE.buildings.find(x => x.linkedHabit === id);
+            if(!h) return;
+
+            const statObj = STATE.stats.find(s => s.id === h.stat);
+
+            let snapshot = { 
+                streak: h.streak, 
+                history: {...h.history}, 
+                gold: STATE.resources.gold, 
+                elixir: STATE.resources.elixir, 
+                xpBefore: statObj ? statObj.xp : 0, 
+                levelBefore: statObj ? statObj.level : 0 
+            };
+
+            const today = new Date().toISOString().split('T')[0];
+            if(!h.history[today]) { h.history[today] = 0; h.streak++; h.frozen = false; }
+            h.history[today]++;
+
+            let level = b ? b.level : 1;
+            let goldReward = REWARD_BASE * level;
+            earn(goldReward, 'gold'); earn(20, 'elixir');
+            
+            let diffMulti = h.diff || 1;
+            if (h.stat) addXP(h.stat, 10 * diffMulti);
+
+            if(h.streak === 7) unlockAchievement('streak_7');
+            if(h.streak === 21) { earn(5, 'gems'); setTimeout(()=>showToast("21 Day Trick! +5 Gems!"), 1500); }
+            if(h.streak === 30) unlockAchievement('streak_30');
+            if(h.streak === 365) { earn(20, 'gems'); setTimeout(()=>showToast("1 YEAR LEGEND! +20 Gems!"), 1500); }
+
+            incrementWeeklyChallenge('habits');
+
+            saveState(); renderHabits();
+            playFX("+"+goldReward+" Gold", "var(--gold)");
+            document.body.appendChild(createFlash());
+
+            showUndoToast(`✅ ${h.name} logged!`, () => undoHabit(id, snapshot));
+        }
+
+        function undoHabit(id, snapshot) {
+            const h = STATE.habits.find(x => x.id === id);
+            if (!h) return;
+            h.streak = snapshot.streak;
+            h.history = snapshot.history;
+            STATE.resources.gold = snapshot.gold;
+            STATE.resources.elixir = snapshot.elixir;
+            
+            const stat = STATE.stats.find(s => s.id === h.stat);
+            if (stat) { stat.xp = snapshot.xpBefore; stat.level = snapshot.levelBefore; }
+            
+            saveState(); renderHabits();
+            showToast("↩️ Habit completion undone.");
+        }
+
+        function openTaskModal() { 
+            document.getElementById('task-title').value = '';
+            document.getElementById('task-diff').value = 1;
+            populateStatSelect('task-stat');
+            document.getElementById('modal-task').classList.add('active'); 
+        }
+
+        function saveTask() {
+            const title = document.getElementById('task-title').value;
+            const diff = document.getElementById('task-diff').value;
+            const stat = document.getElementById('task-stat').value;
+            if(!title) return showToast("Title required!");
+
+            STATE.tasks.push({ id: 't_' + generateId(), title: title, diff: parseInt(diff), stat: stat, status: 'active' });
+            saveState(); closeModals(); renderTasks(); showToast("Bounty Posted!");
+        }
+
+        function promptDeleteTask(id) {
+            const t = STATE.tasks.find(x => x.id === id);
+            openConfirmModal("Cancel Bounty?", `Are you sure you want to remove "${t.title}"?`, () => deleteTask(id), "Remove");
+        }
+
+        function deleteTask(id) {
+            STATE.tasks = STATE.tasks.filter(x => x.id !== id);
+            saveState(); renderTasks(); showToast("Bounty Canceled.");
+        }
+
+        function promptCompleteTask(id) {
+            const t = STATE.tasks.find(x => x.id === id);
+            openConfirmModal("Execute Bounty", `Are you sure you finished "${t.title}"?`, () => completeTask(id), "Claim Loot");
+        }
+
+        function completeTask(id) {
+            const t = STATE.tasks.find(x => x.id === id);
+            if(!t) return;
+            t.status = 'completed';
+            STATE.totalTasksCompleted++;
+            
+            let diffMulti = t.diff || 1;
+            let lootG = diffMulti * 100; let lootE = diffMulti * 50;
+            
+            earn(lootG, 'gold'); earn(lootE, 'elixir');
+            if (diffMulti === 3) earn(5, 'darkElixir');
+            
+            if (t.stat) addXP(t.stat, 20 * diffMulti);
+            
+            unlockAchievement('first_task');
+            if (STATE.totalTasksCompleted >= 10) unlockAchievement('tasks_10');
+
+            incrementWeeklyChallenge('tasks');
+
+            saveState(); renderTasks();
+            playFX("BOUNTY CLAIMED!", "var(--danger)");
+            setTimeout(() => playFX("+"+lootG+" Gold", "var(--gold)"), 300);
+            document.body.appendChild(createFlash());
+        }
+
+        // Manage Stats
+        function openManageStatsModal() {
+            renderManageStatsList();
+            document.getElementById('new-stat-icon').value = '';
+            document.getElementById('new-stat-name').value = '';
+            document.getElementById('new-stat-desc').value = '';
+            document.getElementById('modal-manage-stats').classList.add('active');
+        }
+
+        function renderManageStatsList() {
+            const el = document.getElementById('manage-stats-list');
+            if (!el) return;
+            el.innerHTML = STATE.stats.map(s => `
+                <div class="stat-list-item">
+                    <span>${s.icon} <strong>${s.name}</strong> 
+                        <small style="color:var(--gold)">Lv.${s.level}</small>
+                        ${s.xp > 0 || s.level > 1 ? '<small style="color:var(--text-muted)"> (trained)</small>' : ''}
+                    </span>
+                    <button class="btn-icon-danger" style="width:28px; height:28px;" onclick="deleteStat('${s.id}')">🗑️</button>
+                </div>
+            `).join('');
+        }
+
+        function addStat() {
+            const icon = document.getElementById('new-stat-icon').value || '⭐';
+            const name = document.getElementById('new-stat-name').value;
+            const desc = document.getElementById('new-stat-desc').value;
+            if(!name) return showToast("Stat name required!");
+
+            STATE.stats.push({ id: 'stat_custom_' + generateId(), name, icon, desc, xp: 0, level: 1 });
+            saveState(); renderManageStatsList();
+            document.getElementById('new-stat-icon').value = '';
+            document.getElementById('new-stat-name').value = '';
+            document.getElementById('new-stat-desc').value = '';
+            showToast("Stat added!");
+        }
+
+        function deleteStat(id) {
+            if (STATE.stats.length <= 2) return showToast("You need at least 2 stats.");
+            const stat = STATE.stats.find(s => s.id === id);
+            if (stat.level > 1 || stat.xp > 0) return showToast("Cannot delete a stat you've trained!");
+            STATE.stats = STATE.stats.filter(s => s.id !== id);
+            renderManageStatsList();
+            saveState();
+        }
+
+        // Custom Achievements
+        function openAddAchievementModal() {
+            document.getElementById('trophy-icon').value = '🏆';
+            document.getElementById('trophy-name').value = '';
+            document.getElementById('trophy-desc').value = '';
+            document.getElementById('modal-add-achievement').classList.add('active');
+        }
+
+        function addCustomAchievement() {
+            const icon = document.getElementById('trophy-icon').value || '🏆';
+            const name = document.getElementById('trophy-name').value;
+            const desc = document.getElementById('trophy-desc').value;
+            if(!name) return showToast("Trophy name required!");
+
+            STATE.customAchievements.push({ id: 'ach_custom_' + generateId(), name, icon, desc, earned: true });
+            saveState(); closeModals(); renderStats();
+            showToast(`🏆 Trophy Claimed: ${name}!`);
+        }
+
+        function deleteCustomAchievement(id) {
+            STATE.customAchievements = STATE.customAchievements.filter(a => a.id !== id);
+            saveState(); renderStats();
+        }
+
+        // Upgrades
+        function openBuildingModal(b) {
+            activeBuildingId = b.id;
+            document.getElementById('b-modal-title').innerText = b.name;
+            document.getElementById('b-modal-desc').innerText = `Level ${b.level}`;
+            const btn = document.getElementById('btn-upgrade');
+            const info = document.getElementById('b-modal-upgrade-info');
+
+            if (b.level >= MAX_BUILDING_LEVEL) {
+                info.innerHTML = `<p style="color: var(--gold); font-size: 18px; font-weight: bold;">✨ MAX LEVEL</p>
+                                  <p style="color: var(--text-muted); font-size: 12px;">This building has reached its full potential.</p>`;
+                btn.style.display = 'none';
+                document.getElementById('modal-building').classList.add('active');
+                return;
+            }
+
+            if (b.upgrading) {
+                let remaining = Math.max(0, Math.ceil((b.upgradeStartTime + b.upgradeTotalTime - Date.now()) / 1000));
+                let pct = Math.min(100, ((b.upgradeTotalTime - (remaining*1000)) / b.upgradeTotalTime) * 100);
+                const gemCost = Math.max(1, Math.ceil(remaining / 60));
+                
+                info.innerHTML = `
+                    <p style="color:var(--success)">Currently upgrading...</p>
+                    <div style="background: rgba(0,0,0,0.5); border-radius: 5px; height: 10px; margin-top:10px; overflow:hidden;">
+                        <div style="width: ${pct}%; background: var(--success); height: 100%;"></div>
+                    </div>
+                    <p style="font-size:12px; margin-top:5px; color:var(--text-main);">⏱️ ${formatTime(remaining)} remaining</p>
+                    <button onclick="speedUpUpgrade()" style="margin-top: 15px; width:100%; background:var(--gems); color:black; border:none; padding:10px; border-radius:8px; font-weight:bold; box-shadow:0 4px 0 #047857; cursor:pointer; transition:transform 0.1s;">⚡ Speed Up (${gemCost} 💎)</button>
+                `;
+                btn.style.display = 'none';
+            } else {
+                let req = calculateUpgradeCost(b.type, b.level);
+                info.innerHTML = `
+                    <p style="font-size: 14px; margin-bottom: 10px; font-weight: bold;">Upgrade Cost:</p>
+                    <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 10px;">
+                        <span style="color: var(--gold); font-weight: bold; display: flex; align-items: center; gap: 5px;">🟡 ${req.costG}</span>
+                        <span style="color: var(--elixir); font-weight: bold; display: flex; align-items: center; gap: 5px;">🟣 ${req.costE}</span>
+                        <span style="color: var(--text-muted); font-size: 13px; display: flex; align-items: center; gap: 5px;">⏱️ ${formatTime(req.time)}</span>
+                    </div>
+                `;
+                btn.style.display = 'block';
+                btn.disabled = !canAfford(req.costG, req.costE) || STATE.builders.active >= STATE.builders.total;
+                btn.innerText = STATE.builders.active >= STATE.builders.total ? "No Builders" : "Upgrade";
+            }
+            document.getElementById('modal-building').classList.add('active');
+        }
+
+        function speedUpUpgrade() {
+            const b = STATE.buildings.find(x => x.id === activeBuildingId);
+            if (!b || !b.upgrading) return;
+            const remaining = Math.max(0, Math.ceil((b.upgradeStartTime + b.upgradeTotalTime - Date.now()) / 1000));
+            const gemCost = Math.max(1, Math.ceil(remaining / 60));
+            if (STATE.resources.gems < gemCost) return showToast("Not enough Gems!");
+            
+            earn(-gemCost, 'gems');
+            b.upgrading = false; b.level++;
+            STATE.builders.active = Math.max(0, STATE.builders.active - 1);
+            saveState(); closeModals(); renderVillage();
+            showToast(`⚡ Upgrade complete! -${gemCost} 💎`);
+            document.body.appendChild(createFlash());
+        }
+
+        function startUpgrade() {
+            const b = STATE.buildings.find(x => x.id === activeBuildingId);
+            if(!b || b.upgrading) return;
+            let req = calculateUpgradeCost(b.type, b.level);
+            
+            if (STATE.builders.active >= STATE.builders.total) return showToast("No builders free!");
+            if (!spend(req.costG, req.costE)) return showToast("Not enough Resources!");
+
+            STATE.builders.active++; b.upgrading = true;
+            b.upgradeStartTime = Date.now(); b.upgradeTotalTime = req.time * 1000;
+            
+            saveState(); closeModals(); renderVillage(); showToast("Upgrade started!");
+        }
+
+        function gameLoop() {
+            let changed = false; const now = Date.now();
+            STATE.buildings.forEach(b => {
+                if (b.upgrading && (now - b.upgradeStartTime) >= b.upgradeTotalTime) {
+                    b.upgrading = false; b.level++;
+                    STATE.builders.active = Math.max(0, STATE.builders.active - 1);
+                    changed = true; 
+                    showToast(`🏗️ ${b.name} upgraded to Level ${b.level}!`);
+                    document.body.appendChild(createFlash());
+                }
+            });
+
+            if (changed) {
+                saveState();
+                if (currentTab === 'village') renderVillage();
+            } else if (currentTab === 'village' && STATE.buildings.some(b => b.upgrading)) {
+                STATE.buildings.forEach(b => {
+                    if (b.upgrading) {
+                        const bar = document.querySelector(`.building[data-id="${b.id}"] .upgrade-bar-fill`);
+                        if(bar) {
+                            let pct = Math.min(100, ((now - b.upgradeStartTime) / b.upgradeTotalTime) * 100);
+                            bar.style.width = pct + '%';
+                        }
+                    }
+                });
+            }
+            requestAnimationFrame(gameLoop);
+        }
+
+        function exportDataHTML() {
+            // Escape `<` to prevent breaking the script tag, and escape invisible line separators that cause SyntaxErrors
+            const stateStr = JSON.stringify(STATE)
+                .replace(/</g, '\\u003c')
+                .replace(/\u2028/g, '\\u2028')
+                .replace(/\u2029/g, '\\u2029');
+            
+            const injection = '<script id="save-data">window.INJECTED_STATE = ' + stateStr + ';</' + 'script>';
+            
+            let htmlContent = document.documentElement.outerHTML;
+            const scriptRegex = /<script id="save-data">[\s\S]*?<\/script>/i;
+            
+            if (scriptRegex.test(htmlContent)) {
+                htmlContent = htmlContent.replace(scriptRegex, injection);
+            } else {
+                htmlContent = htmlContent.replace('</head>', injection + '\n</head>');
+            }
+
+            // OuterHTML already contains <html>, so we only need to prepend the doctype
+            const finalDoc = "<!DOCTYPE html>\n" + htmlContent;
+            const blob = new Blob([finalDoc], { type: 'text/html' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'LifeVillage_Save.html';
+            a.click();
+            showToast("💾 Village exported!");
+        }
+
+        function importData(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    let parsed = null;
+                    if (file.name.endsWith('.html')) {
+                        const match = e.target.result.match(/window\.INJECTED_STATE = ({.*?});/s);
+                        if (match && match[1]) parsed = JSON.parse(match[1]);
+                    } else parsed = JSON.parse(e.target.result);
+                    
+                    if (parsed && parsed.version) { STATE = parsed; saveState(); location.reload(); } 
+                    else { throw new Error("Invalid format"); }
+                } catch (err) { showToast("Invalid save file."); }
+            };
+            reader.readAsText(file);
+        }
+
+        function resetData() {
+            if (confirm("⚠️ Are you absolutely sure? This will wipe your village completely!")) {
+                localStorage.removeItem(STORAGE_KEY); location.reload();
+            }
+        }
+
+        window.onload = () => {
+            loadState();
+            initVillageMap();
+            checkPassiveIncome();
+            checkStreaks(); 
+            initWeeklyChallenge();
+            
+            if (STATE.habits.length === 0 && STATE.tasks.length === 0 && STATE.buildings.length <= 2) {
+                setTimeout(() => showToast("⚔️ Welcome to Life Village! Build a Shrine to begin."), 1000);
+            }
+            
+            switchTab('village', document.querySelector('.nav-item')); 
+            requestAnimationFrame(gameLoop);
+        };
+
+    </script>
+
+</body></html>
